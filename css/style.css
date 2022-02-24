@@ -1,0 +1,1695 @@
+/* ESTILOS GENERALES PAGINA */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+h1, h2 {
+    font-family: 'Montserrat';
+}
+
+h3, p {
+    font-family: 'Rubik';
+}
+
+header {
+    grid-area: header;
+    background-color: #368ca7;
+    padding: 3px;
+    height: auto;
+}
+
+main {
+    grid-area: main;
+    background-color: rgb(255, 248, 241);
+}
+
+footer {
+    grid-area: footer;
+}
+
+/* ESTILOS GENERALES NAV */
+nav {
+    display: flex;
+}
+
+.logo {
+    width: 60px;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-weight: 600;
+    color: rgb(255, 248, 241);
+    font-family: 'Montserrat';
+}
+
+
+/* ---------------------------------INDEX--------------------------------- */
+/* ESTILOS GENERALES HERO */
+.heroSection {
+    display: flex;
+    flex-direction: column;
+    background-image: url('../imagenes/herobackground5mob.png');
+    justify-content: center;
+}
+.heroMain {
+    margin: 20px 0 15px 0;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: flex-end;
+    text-align: center;
+}
+
+.heroMain h1 {
+    padding-bottom: 10px 0;
+    color: rgb(255, 248, 241);
+}
+
+.heroMain h2 {
+    color: rgb(255, 248, 241);
+}
+
+.heroMain p {
+    padding: 40px 0;
+    color: rgb(255, 248, 241);
+    font-weight: 500;
+}
+
+.mainButton {
+    padding: 15px 20px;
+    background-color: #368ca7;
+    color: rgb(255, 248, 241);
+    font-family: 'Montserrat Alternates';
+    font-weight: 600;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+}
+
+/* GENERALES PRODUCT */
+.productSection a {
+    text-decoration: none;
+}
+
+.producto1 {
+    grid-area: producto1;
+}
+
+.producto2 {
+    grid-area: producto2;
+}
+
+.producto3 {
+    grid-area: producto3;
+}
+
+.producto4 {
+    grid-area: producto4;
+}
+
+.producto5 {
+    grid-area: producto5;
+}
+
+.producto6 {
+    grid-area: producto6;
+}
+
+#productContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: center;
+    padding: 20px 30px;
+}
+
+#productContainer a {
+    display: flex;
+    justify-content: center;
+}
+
+.productText {
+    grid-area: productText;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 70px 0 30px 0;
+}
+
+.productTittle {
+    font-size: 40px;
+}
+
+.productSubtittle {
+    margin-top: 20px;
+    font-size: 25px;
+}
+
+.imageProduct {
+    border-radius: 13px;
+    width: 300px;
+    height: 400px;
+}
+
+.tittleProduct {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.textProduct {
+    text-align: justify;
+    padding: 0 30px;
+}
+
+.loQuiero {
+    background-color: #368ca7;
+    color: rgb(255, 248, 241);
+    font-size: 15px;
+    font-weight: 600;
+    padding: 15px 30px;
+    margin-top: 40px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+/* GENERALES VER MAS */
+.verMas {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url('../imagenes/pexels-nappy-936000mob.png');
+    background-size: cover;
+    height: 400px;
+    margin-top: 40px;
+}
+
+.textMas {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.textMas h2 {
+    color: #f6f6f6;
+    font-size: 50px;
+    margin: 30px 0;
+}
+
+.buttonMas {
+    padding: 15px 20px;
+    background-color: #368ca7;
+    color: rgb(255, 248, 241);
+    font-family: 'Montserrat Alternates';
+    font-weight: 600;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+}
+
+/* GENERALES WHATSAPP */
+.whatsapp {
+    width: 50px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 0 10px 15px 0;
+}
+
+/* GENERALES FOOTER */
+.logoFooter {
+    grid-area: logoFooter;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.logoFooter img {
+    width: 90px;
+    margin-left: 15%;
+}
+
+.redesFooter {
+    grid-area: redesFooter;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.redes {
+    width: 40px;
+
+}
+
+.navFooter {
+    grid-area: navFooter;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.ulFooter {
+    display: flex;
+    align-items: flex-end;
+    gap: 5px;
+}
+
+.ulFooter li {
+    list-style: none;
+}
+
+.ulFooter li a {
+     text-decoration: none;
+     color: #f6f6f6;
+     font-size: 20px;
+     font-family: "Montserrat";
+     font-weight: 600;
+}
+
+.buttonFooter {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    font-family: 'Montserrat Alternates';
+    font-size: 17px;
+    color: #f6f6f6;
+    grid-area: buttonFooter;
+}
+
+.buttonFooter a {
+    text-decoration: none;
+    color: #f6f6f6;
+}
+
+
+/* -------------------------- GENERALES MENU ---------------------------- */
+/* GENERALES MENU */
+#productContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.menuText {
+    grid-area: menuText;
+    margin-bottom: 70px;
+    padding-top: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.productContainer1 {
+    grid-area: productContainer1;
+}
+
+.productContainer2 {
+    grid-area: productContainer2;
+}
+
+.productContainer3 {
+    grid-area: productContainer3;
+}
+
+.productContainer4 {
+    grid-area: productContainer4;
+}
+
+.productContainer5 {
+    grid-area: productContainer5;
+}
+
+.productContainer6 {
+    grid-area: productContainer6;
+}
+
+.productContainer7 {
+    grid-area: productContainer7;
+}
+
+.productContainer8 {
+    grid-area: productContainer8;
+}
+
+.productContainer9 {
+    grid-area: productContainer9;
+}
+
+.productContainer10 {
+    grid-area: productContainer10;
+}
+
+.productContainer11 {
+    grid-area: productContainer11;
+}
+
+.productContainer12 {
+    grid-area: productContainer12;
+}
+
+.productContainer13 {
+    grid-area: productContainer13;
+}
+
+.productContainer14 {
+    grid-area: productContainer14;
+}
+
+.productContainer15 {
+    grid-area: productContainer15;
+}
+
+.productContainer16 {
+    grid-area: productContainer16;
+}
+
+.productContainer17 {
+    grid-area: productContainer17;
+}
+
+.productContainer18 {
+    grid-area: productContainer18;
+}
+
+.menuTittle {
+    font-size: 40px;
+    padding: 0 10px;
+}
+
+
+/* --------------------------- GENERALES NOSOTROS --------------------------- */
+/* GENERALES NOSOTROS */
+.conocenosText {
+    margin: 30px 0;
+    grid-area: conocenosText;
+}
+
+.conocenosTittle {
+    text-align: center;
+}
+
+#conocenosP {
+    padding: 0 30px;
+    text-align: justify;
+}
+
+#conocenosI {
+    border-radius: 10px;
+}
+
+.cononenosP1 {
+    grid-area: conocenosP1;
+}
+
+.conocenosP2 {
+    grid-area: conocenosP2;
+}
+
+.conocenosP3 {
+    grid-area: conocenosP3;
+}
+
+.conocenosImage1 {
+    grid-area: conocenosImage1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.conocenosImage2 {
+    grid-area: conocenosImage2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.conocenosImage3 {
+    grid-area: conocenosImage3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ------------------------- GENERALES UBICACIONES ---------------------- */
+.ubicacionesText {
+    margin: 30px 0;
+    grid-area: ubicacionesText;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ubicacionesTittle {
+    text-align: center;
+}
+
+.ubicacionesSubtittle {
+    text-align: center;
+}
+
+.ubicaciones1 {
+    grid-area: ubicaciones1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ubicaciones2 {
+    grid-area: ubicaciones2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ubicaciones3 {
+    grid-area: ubicaciones3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* -------------------------- GENERALES CONTACTO ------------------------  */
+.contactoText {
+    margin: 30px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contactoTittle, .contactoSubtittle {
+    text-align: center;
+    margin: 15px 0;
+}
+
+.contactoGrid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contactoForm input, textarea {
+    font-family: 'Montserrat';
+    border-radius: 20px;
+    background-color: rgb(255, 248, 241);
+    color: #368ca7;
+    font-weight: 600;
+    border: 3px solid;
+    border-color: #368ca7;
+}
+
+.form1 {
+    grid-area: form1;
+    display: flex;
+    justify-content: center;
+}
+
+#nombre {
+    text-align: center;
+}
+
+.form2 {
+    grid-area: form2;
+    display: flex;
+    justify-content: center;
+}
+
+#apellido {
+    text-align: center;
+}
+
+.form3 {
+    grid-area: form3;
+    display: flex;
+    justify-content: center;
+}
+
+#email {
+    text-align: center;
+}
+
+.form4 {
+    grid-area: form4;
+    display: flex;
+    justify-content: center;
+}
+
+#telefono {
+    text-align: center;
+}
+
+.form5 {
+    grid-area: form5;
+    display: flex;
+    justify-content: center;
+}
+
+#mensaje {
+    text-align: center;
+    font-size: 13px;
+}
+
+.form6 {
+    grid-area: form6;
+    display: flex;
+    justify-content: center;
+    margin: 0 10px;
+}
+
+#enviar {
+    font-weight: 600;
+    padding: 12px 17px;
+    background-color: rgb(255, 248, 241);
+    color: #368ca7;
+    border: 3px solid;
+    border-color: #368ca7;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+
+
+/* QUERY PARA MOVILES */
+@media screen and (min-width: 320px) and (max-width: 599px) {
+    /* --------------------------INDEX------------------------ */
+    /* ESTILOS GENERALES */
+    .bodyIndex {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: "header"
+                             "main"
+                             "footer";
+    }
+
+    /* NAV */
+    header {
+        padding: 20px;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    #mainLogo {
+        display: flex;
+        justify-content: center;
+    }
+
+    nav ul  {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 25px 0 0 0;
+        justify-content: space-evenly;
+        gap: 9px;
+    }
+
+
+    /*HERO SECTION*/
+    .heroSection {
+        height: 77vh;
+    }
+
+    .heroMain h1 {
+        font-size: 30px;
+    }
+
+    .heroMain h2 {
+        font-size: 40px;
+    }
+
+    .heroMain p {
+        font-size: 25px;
+    }
+
+    .mainButton {
+        font-size: 13px;
+    }
+
+    /* PRODUCT SECTION */
+
+    .productSection {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto auto auto auto auto;
+        grid-template-areas: "productText"
+                             "producto1"
+                             "producto2"
+                             "producto3"
+                             "producto4"
+                             "producto5"
+                             "producto6";
+        row-gap: 70px;
+    }
+
+    /* VER MAS SECTION */
+    .buttonMas {
+        font-size: 13px;
+    }
+
+    /* WHATSAPP */
+    .whatsapp {
+        display: none;
+    }
+
+    /* FOOTER */
+
+    footer {
+        background-color: #368ca7;
+        padding: 0 15px;
+        display: grid;
+        height: auto;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 150px 200px 70px;
+        grid-template-areas: "redesFooter redesFooter"
+                             "logoFooter navFooter"
+                             "buttonFooter buttonFooter";
+    }
+
+    .ulFooter {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    /* ------------------------------MENU------------------------------ */
+    .menuMain {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
+        grid-template-areas: "menuText"
+                             "productContainer1"
+                             "productContainer2"
+                             "productContainer3"
+                             "productContainer4"
+                             "productContainer5"
+                             "productContainer6"
+                             "productContainer7"
+                             "productContainer8"
+                             "productContainer9"
+                             "productContainer10"
+                             "productContainer11"
+                             "productContainer12"
+                             "productContainer13"
+                             "productContainer14"
+                             "productContainer15"
+                             "productContainer16"
+                             "productContainer17"
+                             "productContainer18";
+        row-gap: 40px;
+        margin-bottom: 70px;
+    }
+
+    /* --------------------------CONOCENOS------------------------- */
+    .conocenosGrid {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto auto auto auto auto;
+        grid-template-areas: "conocenosText"
+                             "conocenosImage1"
+                             "conocenosP1"
+                             "conocenosImage2"
+                             "conocenosP2"
+                             "conocenosImage3"
+                             "conocenosP3";
+        row-gap: 40px;
+        margin-bottom: 50px;
+    }
+
+    .conocenosTittle {
+        font-size: 30px;
+    }
+
+    #conocenosI {
+        width: 300px;
+    }
+
+    /* --------------------- UBICACIONES --------------------- */
+    .ubicacionesMain {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas: "ubicacionesText"
+                             "ubicaciones1"
+                             "ubicaciones2"
+                             "ubicaciones3";
+        row-gap: 50px;
+        margin-bottom: 50px;
+    }
+
+    .ubicacionesMap {
+        width: 300px;
+    }
+
+    .ubicacionesTittle {
+        font-size: 40px;
+        margin: 20px 0;
+    }
+
+    .ubicacionesSubtittle {
+        font-size: 25px;
+        margin: 15px 0;
+    }
+
+    .ubicacionesSucursal {
+        margin: 20px 0 20px 0;
+    }
+
+    /* ------------------------- CONTACTO --------------------- */
+    .contactoTittle {
+        font-size: 30px;
+    }
+
+    .contactoSubtittle {
+        font-size: 25px;
+    }
+
+    .contactoForm {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto auto auto auto;
+        grid-template-areas: "form1"
+                             "form2"
+                             "form3"
+                             "form4"
+                             "form5"
+                             "form6";
+        row-gap: 15px;
+        margin-bottom: 50px;
+    }
+
+    .contactoForm {
+        height: auto;
+    }
+
+    #nombre, #apellido, #email, #telefono {
+        padding: 10px 35px;
+    }
+
+    #mensaje {
+        margin: 10px 10px;
+    }
+}
+
+/* QUERY PARA TABLETAS PEQUEÑAS */
+@media screen and (min-width: 600px) and (max-width: 767px) {
+    /* ESTILOS GENERALES */
+    .bodyIndex {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: "header header"
+                             "main main"
+                             "footer footer";
+    }
+
+    /* NAV */
+    header {
+        padding: 20px;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    #mainLogo {
+        display: flex;
+        justify-content: center;
+    }
+
+    nav ul  {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: 25px 0 0 0;
+        justify-content: space-evenly;
+        gap: 9px;
+    }
+
+    /*HERO SECTION*/
+    .heroSection {
+        height: 90vh;
+    }
+
+    .heroMain h1 {
+        font-size: 40px;
+    }
+
+    .heroMain h2 {
+        font-size: 40px;
+    }
+
+    .heroMain p {
+        font-size: 25px;
+    }
+
+    .mainButton {
+        font-size: 14px;
+    }
+
+    /* PRODUCT SECTION */
+
+    .productSection {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto auto auto auto auto;
+        grid-template-areas: "productText"
+                             "producto1"
+                             "producto2"
+                             "producto3"
+                             "producto4"
+                             "producto5"
+                             "producto6";
+        row-gap: 70px;
+    }
+
+    /* VER MAS SECTION */
+    .buttonMas {
+        font-size: 15px;
+    }
+
+    .whatsapp {
+        display: none;
+    }
+
+    /* FOOTER */
+
+    footer {
+        background-color: #368ca7;
+        padding: 0 15px;
+        display: grid;
+        height: auto;
+        grid-template-columns: 20% 80%;
+        grid-template-rows: 150px 200px 70px;
+        grid-template-areas: "redesFooter redesFooter"
+                             "logoFooter navFooter"
+                             "buttonFooter buttonFooter";
+    }
+
+    .ulFooter {
+        gap: 20px;
+    }
+
+    .ulFooter li a {
+        font-size: 17px;
+    }
+
+    /* ------------------------------MENU------------------------------ */
+    .menuMain {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
+        grid-template-areas: "menuText"
+                             "productContainer1"
+                             "productContainer2"
+                             "productContainer3"
+                             "productContainer4"
+                             "productContainer5"
+                             "productContainer6"
+                             "productContainer7"
+                             "productContainer8"
+                             "productContainer9"
+                             "productContainer10"
+                             "productContainer11"
+                             "productContainer12"
+                             "productContainer13"
+                             "productContainer14"
+                             "productContainer15"
+                             "productContainer16"
+                             "productContainer17"
+                             "productContainer18";
+        row-gap: 40px;
+        margin-bottom: 70px;
+    }
+
+     /* --------------------------CONOCENOS------------------------- */
+     .conocenosGrid {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto auto auto auto auto;
+        grid-template-areas: "conocenosText"
+                             "conocenosImage1"
+                             "conocenosP1"
+                             "conocenosImage2"
+                             "conocenosP2"
+                             "conocenosImage3"
+                             "conocenosP3";
+        row-gap: 40px;
+        margin-bottom: 50px;
+    }
+
+    .conocenosTittle {
+        font-size: 40px;
+    }
+
+    #conocenosI {
+        width: 400px;
+    }
+
+    /* --------------------- UBICACIONES --------------------- */
+    .ubicacionesMain {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas: "ubicacionesText"
+                             "ubicaciones1"
+                             "ubicaciones2"
+                             "ubicaciones3";
+        row-gap: 50px;
+        margin-bottom: 50px;
+    }
+
+    .ubicacionesMap {
+        width: 500px;
+    }
+
+    .ubicacionesTittle {
+        font-size: 40px;
+        margin: 20px 0;
+    }
+
+    .ubicacionesSubtittle {
+        font-size: 25px;
+        margin: 15px 0;
+    }
+
+    .ubicacionesSucursal {
+        margin: 20px 0 20px 0;
+    }
+
+    /* ------------------------- CONTACTO --------------------- */
+    .contactoTittle {
+        font-size: 40px;
+    }
+
+    .contactoSubtittle {
+        font-size: 30px;
+    }
+
+    .contactoForm {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto auto auto auto;
+        grid-template-areas: "form1"
+                             "form2"
+                             "form3"
+                             "form4"
+                             "form5"
+                             "form6";
+        row-gap: 15px;
+        margin-bottom: 50px;
+    }
+
+    .contactoForm {
+        height: auto;
+    }
+
+    #nombre, #apellido, #email, #telefono {
+        padding: 10px 50px;
+    }
+
+    #mensaje {
+        margin: 10px 0px;
+        font-size: 15px;
+    }
+
+}
+
+/* QUERY PARA TABLETAS */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    /* ESTILOS GENERALES */
+    .bodyIndex {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: "header header"
+                             "main main"
+                             "footer footer";
+    }
+
+    /* NAV */
+    header {
+        padding: 20px;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    #mainLogo {
+        display: flex;
+        justify-content: center;
+    }
+
+    nav ul  {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: 25px 0 0 0;
+        justify-content: space-evenly;
+        gap: 9px;
+    }
+
+    /*HERO SECTION*/
+    .heroSection {
+        height: 90vh;
+    }
+
+    .heroMain h1 {
+        font-size: 45px;
+    }
+
+    .heroMain h2 {
+        font-size: 50px;
+    }
+
+    .heroMain p {
+        font-size: 30px;
+    }
+
+    .mainButton {
+        font-size: 17px;
+    }
+
+    /* PRODUCT SECTION */
+
+    .productSection {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas: "productText productText"
+                             "producto1 producto2"
+                             "producto3 producto4"
+                             "producto5 producto6";
+        row-gap: 70px;
+    }
+
+    /* VER MAS SECTION */
+
+    .buttonMas {
+        font-size: 16px;
+    }
+
+    /* FOOTER */
+
+    footer {
+        background-color: #368ca7;
+        padding: 0 15px;
+        display: grid;
+        height: auto;
+        grid-template-columns: 20% 80%;
+        grid-template-rows: 150px 200px 70px;
+        grid-template-areas: "redesFooter redesFooter"
+                             "logoFooter navFooter"
+                             "buttonFooter buttonFooter";
+    }
+
+    .ulFooter {
+        gap: 20px;
+    }
+
+    /* ------------------------------MENU------------------------------ */
+    .menuMain {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto auto auto auto auto auto auto auto auto auto;
+        grid-template-areas: "menuText menuText"
+                             "productContainer1 productContainer2"
+                             "productContainer3 productContainer4"
+                             "productContainer5 productContainer6"
+                             "productContainer7 productContainer8"
+                             "productContainer9 productContainer10"
+                             "productContainer11 productContainer12"
+                             "productContainer13 productContainer14"
+                             "productContainer15 productContainer16"
+                             "productContainer17 productContainer18";
+        row-gap: 30px;
+        margin-bottom: 50px;
+    }
+
+    /* --------------------------CONOCENOS------------------------- */
+    .conocenosGrid {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas: "conocenosText conocenosText"
+                             "conocenosImage1 conocenosP1"
+                             "conocenosP2 conocenosImage2"
+                             "conocenosImage3 conocenosP3";
+        row-gap: 60px;
+        margin-bottom: 80px;
+    }
+
+    .conocenosTittle {
+        font-size: 40px;
+    }
+
+    #conocenosI {
+        width: 400px;
+    }
+
+    /* --------------------- UBICACIONES --------------------- */
+    .ubicacionesMain {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: "ubicacionesText ubicacionesText"
+                             "ubicaciones1 ubicaciones2"
+                             "ubicaciones3 ubicaciones3";
+        row-gap: 50px;
+        margin-bottom: 50px;
+    }
+
+    .ubicacionesMap {
+        width: 300px;
+    }
+
+    .ubicacionesTittle {
+        font-size: 40px;
+        margin: 20px 0;
+    }
+
+    .ubicacionesSubtittle {
+        font-size: 25px;
+        margin: 15px 0;
+    }
+
+    .ubicacionesSucursal {
+        margin: 20px 0 20px 0;
+    }
+
+    /* ------------------------- CONTACTO --------------------- */
+    .contactoTittle {
+        font-size: 40px;
+    }
+
+    .contactoSubtittle {
+        font-size: 30px;
+    }
+
+    .contactoForm {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto auto auto auto;
+        grid-template-areas: "form1"
+                             "form2"
+                             "form3"
+                             "form4"
+                             "form5"
+                             "form6";
+        row-gap: 15px;
+        margin-bottom: 50px;
+    }
+
+    .contactoForm {
+        height: auto;
+    }
+
+    #nombre, #apellido, #email, #telefono {
+        padding: 10px 50px;
+    }
+
+    #mensaje {
+        margin: 10px 0px;
+        font-size: 15px;
+    }
+}
+
+/* QUERY PARA NOTEBOOKS */
+@media screen and (min-width: 1024px) and (max-width: 1999px) {
+     /* ESTILOS GENERALES */
+     .bodyIndex {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: "header header header"
+                             "main main main"
+                             "footer footer footer";
+    }
+
+    /* NAV */
+    nav {
+        justify-content: space-between;
+    }
+
+    .logo {
+        width: 70px;
+        margin-left: 60px;
+        margin-top: 2px;
+    }
+
+    nav ul  {
+        display: flex;
+        align-items: center;
+        margin-right: 80px;
+    }
+
+    nav ul li a {
+        margin: 0px 10px;
+        padding: 25px 20px;
+    }
+
+
+    nav ul li a:hover {
+        background-color: rgb(255, 248, 241);
+        color: #368ca7;
+        transition: all .3s;
+
+    }
+
+    /*HERO SECTION*/
+    .heroSection {
+        height: 95vh;
+    }
+
+    .heroMain h1 {
+        font-size: 60px;
+    }
+
+    .heroMain h2 {
+        font-size: 70px;
+    }
+
+    .heroMain p {
+        font-size: 25px;
+    }
+
+    .mainButton {
+        font-size: 17px;
+    }
+
+    .mainButton:hover {
+        padding: 12px 17px;
+        background-color: rgb(255, 248, 241);
+        color: #368ca7;
+        border: 3px solid;
+        border-color: #368ca7;
+        transition: .2s;
+        transform: scale(1.2, 1.2);
+    }
+
+    /* PRODUCT SECTION */
+
+    .productSection {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: "productText productText productText"
+                             "producto1 producto2 producto3"
+                             "producto4 producto5 producto6";
+        row-gap: 70px;
+    }
+
+    .loQuiero:hover {
+        background-color: rgb(255, 248, 241);
+        color: #368ca7;
+        border: 2px solid;
+        border-color: #368ca7;
+        transition: all .2s;
+    }
+
+    /* VER MAS SECTION */
+    .buttonMas {
+        font-size: 17px;
+    }
+
+    .buttonMas:hover {
+        padding: 12px 17px;
+        background-color: rgb(255, 248, 241);
+        color: #368ca7;
+        border: 3px solid;
+        border-color: #368ca7;
+        transition: .2s;
+    }
+
+    /* FOOTER */
+
+    footer {
+        background-color: #368ca7;
+        padding: 0 15px;
+        display: grid;
+        height: auto;
+        grid-template-columns: 20% 80%;
+        grid-template-rows: 150px 200px 70px;
+        grid-template-areas: "redesFooter redesFooter"
+                             "logoFooter navFooter"
+                             "buttonFooter buttonFooter";
+    }
+
+    .navFooter {
+        margin-right: 10%;
+    }
+
+    .ulFooter {
+        gap: 30px;
+    }
+
+    /* --------------------------------MENU---------------------------- */
+    .menuMain {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto auto auto auto auto auto auto auto;
+        grid-template-areas: "menuText menuText menuText"
+                             "productContainer1 productContainer2 productContainer3"
+                             "productContainer4 productContainer5 productContainer6"
+                             "productContainer7 productContainer8 productContainer9" "productContainer10 productContainer11 productContainer12"
+                             "productContainer13 productContainer14 productContainer15" "productContainer16 productContainer17 productContainer18";
+        row-gap: 50px;
+        margin-bottom: 30px;
+    }
+
+     /* --------------------------CONOCENOS------------------------- */
+     .conocenosGrid {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas: "conocenosText conocenosText"
+                             "conocenosImage1 conocenosP1"
+                             "conocenosP2 conocenosImage2"
+                             "conocenosImage3 conocenosP3";
+        row-gap: 60px;
+        margin-bottom: 80px;
+    }
+
+    .conocenosTittle {
+        font-size: 40px;
+    }
+
+    #conocenosI {
+        width: 500px;
+    }
+
+     /* --------------------- UBICACIONES --------------------- */
+     .ubicacionesMain {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto auto;
+        grid-template-areas: "ubicacionesText ubicacionesText ubicacionesText"
+                             "ubicaciones1 ubicaciones2 ubicaciones3";
+        row-gap: 50px;
+        margin-bottom: 50px;
+    }
+
+    .ubicacionesMap {
+        width: 350px;
+    }
+
+    .ubicacionesTittle {
+        font-size: 40px;
+        margin: 20px 0;
+    }
+
+    .ubicacionesSubtittle {
+        font-size: 25px;
+        margin: 15px 0;
+    }
+
+    .ubicacionesSucursal {
+        margin: 20px 0 20px 0;
+    }
+
+    /* ------------------------- CONTACTO --------------------- */
+    .contactoTittle {
+        font-size: 40px;
+    }
+
+    .contactoSubtittle {
+        font-size: 30px;
+    }
+
+    .contactoForm {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto auto auto auto;
+        grid-template-areas: "form1" 
+                             "form2"
+                             "form3"
+                             "form4"
+                             "form5"
+                             "form6";
+        row-gap: 10px;
+        column-gap: 40px;
+        margin-bottom: 50px;
+    }
+
+    .contactoForm {
+        height: auto;
+    }
+
+    #nombre, #apellido, #email, #telefono {
+        padding: 10px 100px;
+    }
+
+    #mensaje {
+        margin: 10px 0px;
+        padding: 0 60px;
+        font-size: 15px;
+    }
+}
+
+/* QUERY PARA PANTALLAS GRANDES */
+@media screen and (min-width: 1200px) {
+    /* ESTILOS GENERALES */
+    .bodyIndex {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: "header header header"
+                             "main main main"
+                             "footer footer footer";
+    }
+
+    /* NAV */
+    nav {
+        justify-content: space-between;
+    }
+
+    .logo {
+        width: 70px;
+        margin-left: 60px;
+        margin-top: 2px;
+    }
+
+    nav ul  {
+        display: flex;
+        align-items: center;
+        margin-right: 80px;
+    }
+
+    nav ul li a {
+        margin: 0px 10px;
+        padding: 25px 20px;
+    }
+
+    nav ul li a:hover {
+        background-color: rgb(255, 248, 241);
+        color: #368ca7;
+        transition: all .3s;
+    }
+
+    /*HERO SECTION*/
+    .heroSection {
+        height: 95vh;
+    }
+
+    .heroMain h1 {
+        font-size: 60px;
+    }
+
+    .heroMain h2 {
+        font-size: 70px;
+    }
+
+    .heroMain p {
+        font-size: 25px;
+    }
+
+    .mainButton {
+        font-size: 17px;
+    }
+
+    .mainButton:hover {
+        padding: 12px 17px;
+        background-color: rgb(255, 248, 241);
+        color: #368ca7;
+        border: 3px solid;
+        border-color: #368ca7;
+        transition: .2s;
+        transform: scale(1.2, 1.2);
+    }
+
+    /* PRODUCT SECTION */
+
+    .productSection {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: "productText productText productText"
+                             "producto1 producto2 producto3"
+                             "producto4 producto5 producto6";
+        row-gap: 70px;
+    }
+
+    .loQuiero:hover {
+        background-color: rgb(255, 248, 241);
+        color: #368ca7;
+        border: 2px solid;
+        border-color: #368ca7;
+        transition: all .2s;
+    }
+
+    /* VER MAS SECTION */
+    .buttonMas {
+        font-size: 17px;
+    }
+
+    .buttonMas:hover {
+        padding: 12px 17px;
+        background-color: rgb(255, 248, 241);
+        color: #368ca7;
+        border: 3px solid;
+        border-color: #368ca7;
+        transition: .2s;
+    }
+
+    /* FOOTER */
+
+    footer {
+        background-color: #368ca7;
+        padding: 0 15px;
+        display: grid;
+        height: auto;
+        grid-template-columns: 20% 80%;
+        grid-template-rows: 150px 200px 70px;
+        grid-template-areas: "redesFooter redesFooter"
+                             "logoFooter navFooter"
+                             "buttonFooter buttonFooter";
+    }
+
+    .navFooter {
+        margin-right: 10%;
+    }
+
+    .ulFooter {
+        gap: 30px;
+    }
+
+    /* --------------------------------MENU---------------------------- */
+    .menuMain {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto auto auto auto auto auto auto auto;
+        grid-template-areas: "menuText menuText menuText"
+                             "productContainer1 productContainer2 productContainer3"
+                             "productContainer4 productContainer5 productContainer6"
+                             "productContainer7 productContainer8 productContainer9" "productContainer10 productContainer11 productContainer12"
+                             "productContainer13 productContainer14 productContainer15" "productContainer16 productContainer17 productContainer18";
+        row-gap: 50px;
+        margin-bottom: 30px;
+    }
+
+    /* --------------------------CONOCENOS------------------------- */
+    .conocenosGrid {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas: "conocenosText conocenosText"
+                             "conocenosImage1 conocenosP1"
+                             "conocenosP2 conocenosImage2"
+                             "conocenosImage3 conocenosP3";
+        row-gap: 60px;
+        margin-bottom: 80px;
+    }
+
+    .conocenosTittle {
+        font-size: 40px;
+    }
+
+    #conocenosI {
+        width: 500px;
+    }
+
+    /* --------------------- UBICACIONES --------------------- */
+    .ubicacionesMain {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto auto;
+        grid-template-areas: "ubicacionesText ubicacionesText ubicacionesText"
+                             "ubicaciones1 ubicaciones2 ubicaciones3";
+        row-gap: 50px;
+        margin-bottom: 50px;
+    }
+
+    .ubicacionesMap {
+        width: 400px;
+    }
+
+    .ubicacionesTittle {
+        font-size: 40px;
+        margin: 20px 0;
+    }
+
+    .ubicacionesSubtittle {
+        font-size: 25px;
+        margin: 15px 0;
+    }
+
+    .ubicacionesSucursal {
+        margin: 20px 0 20px 0;
+    }
+
+    /* ------------------------- CONTACTO --------------------- */
+    .contactoTittle {
+        font-size: 40px;
+    }
+
+    .contactoSubtittle {
+        font-size: 30px;
+    }
+
+    .contactoForm {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto auto auto auto;
+        grid-template-areas: "form1" 
+                             "form2"
+                             "form3"
+                             "form4"
+                             "form5"
+                             "form6";
+        row-gap: 10px;
+        column-gap: 40px;
+        margin-bottom: 50px;
+    }
+
+    .contactoForm {
+        height: auto;
+    }
+
+    #nombre, #apellido, #email, #telefono {
+        padding: 10px 100px;
+    }
+
+    #mensaje {
+        margin: 10px 0px;
+        padding: 0 60px;
+        font-size: 15px;
+    }
+}
