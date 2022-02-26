@@ -29,24 +29,10 @@ footer {
 }
 
 /* ESTILOS GENERALES NAV */
-nav {
-    display: flex;
-}
-
 .logo {
     width: 60px;
 }
 
-nav ul li {
-    list-style: none;
-}
-
-nav ul li a {
-    text-decoration: none;
-    font-weight: 600;
-    color: rgb(255, 248, 241);
-    font-family: 'Montserrat';
-}
 
 
 /* ---------------------------------INDEX--------------------------------- */
@@ -94,38 +80,12 @@ nav ul li a {
 }
 
 /* GENERALES PRODUCT */
-.productSection a {
-    text-decoration: none;
-}
 
-.producto1 {
-    grid-area: producto1;
-}
-
-.producto2 {
-    grid-area: producto2;
-}
-
-.producto3 {
-    grid-area: producto3;
-}
-
-.producto4 {
-    grid-area: producto4;
-}
-
-.producto5 {
-    grid-area: producto5;
-}
-
-.producto6 {
-    grid-area: producto6;
-}
 
 #productContainer {
     display: flex;
     flex-direction: column;
-    justify-content: stretch;
+    justify-content: center;
     align-items: center;
     padding: 20px 30px;
 }
@@ -136,7 +96,6 @@ nav ul li a {
 }
 
 .productText {
-    grid-area: productText;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -156,6 +115,10 @@ nav ul li a {
     border-radius: 13px;
     width: 300px;
     height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .tittleProduct {
@@ -498,14 +461,18 @@ nav ul li a {
     margin: 15px 0;
 }
 
-.contactoGrid {
+.contactoFlex {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.contactoForm input, textarea {
+#contactForm {
+    margin: 10px 0 100px 0;
+}
+
+.form-control {
     font-family: 'Montserrat';
     border-radius: 20px;
     background-color: rgb(255, 248, 241);
@@ -514,77 +481,10 @@ nav ul li a {
     border: 3px solid;
     border-color: #368ca7;
 }
-
-.form1 {
-    grid-area: form1;
-    display: flex;
-    justify-content: center;
+.form-label {
+    font-family: 'Montserrat';
+   font-size: 25px;
 }
-
-#nombre {
-    text-align: center;
-}
-
-.form2 {
-    grid-area: form2;
-    display: flex;
-    justify-content: center;
-}
-
-#apellido {
-    text-align: center;
-}
-
-.form3 {
-    grid-area: form3;
-    display: flex;
-    justify-content: center;
-}
-
-#email {
-    text-align: center;
-}
-
-.form4 {
-    grid-area: form4;
-    display: flex;
-    justify-content: center;
-}
-
-#telefono {
-    text-align: center;
-}
-
-.form5 {
-    grid-area: form5;
-    display: flex;
-    justify-content: center;
-}
-
-#mensaje {
-    text-align: center;
-    font-size: 13px;
-}
-
-.form6 {
-    grid-area: form6;
-    display: flex;
-    justify-content: center;
-    margin: 0 10px;
-}
-
-#enviar {
-    font-weight: 600;
-    padding: 12px 17px;
-    background-color: rgb(255, 248, 241);
-    color: #368ca7;
-    border: 3px solid;
-    border-color: #368ca7;
-    border-radius: 20px;
-    cursor: pointer;
-}
-
-
 
 /* QUERY PARA MOVILES */
 @media screen and (min-width: 320px) and (max-width: 599px) {
@@ -600,27 +500,7 @@ nav ul li a {
     }
 
     /* NAV */
-    header {
-        padding: 20px;
-    }
-
-    nav {
-        flex-direction: column;
-    }
-
-    #mainLogo {
-        display: flex;
-        justify-content: center;
-    }
-
-    nav ul  {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin: 25px 0 0 0;
-        justify-content: space-evenly;
-        gap: 9px;
-    }
+    
 
 
     /*HERO SECTION*/
@@ -642,22 +522,6 @@ nav ul li a {
 
     .mainButton {
         font-size: 13px;
-    }
-
-    /* PRODUCT SECTION */
-
-    .productSection {
-        display: grid;
-        grid-template-columns: auto;
-        grid-template-rows: auto auto auto auto auto auto auto;
-        grid-template-areas: "productText"
-                             "producto1"
-                             "producto2"
-                             "producto3"
-                             "producto4"
-                             "producto5"
-                             "producto6";
-        row-gap: 70px;
     }
 
     /* VER MAS SECTION */
@@ -821,27 +685,7 @@ nav ul li a {
     }
 
     /* NAV */
-    header {
-        padding: 20px;
-    }
-
-    nav {
-        flex-direction: column;
-    }
-
-    #mainLogo {
-        display: flex;
-        justify-content: center;
-    }
-
-    nav ul  {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        margin: 25px 0 0 0;
-        justify-content: space-evenly;
-        gap: 9px;
-    }
+  
 
     /*HERO SECTION*/
     .heroSection {
@@ -862,22 +706,6 @@ nav ul li a {
 
     .mainButton {
         font-size: 14px;
-    }
-
-    /* PRODUCT SECTION */
-
-    .productSection {
-        display: grid;
-        grid-template-columns: auto;
-        grid-template-rows: auto auto auto auto auto auto auto;
-        grid-template-areas: "productText"
-                             "producto1"
-                             "producto2"
-                             "producto3"
-                             "producto4"
-                             "producto5"
-                             "producto6";
-        row-gap: 70px;
     }
 
     /* VER MAS SECTION */
@@ -1045,27 +873,7 @@ nav ul li a {
     }
 
     /* NAV */
-    header {
-        padding: 20px;
-    }
-
-    nav {
-        flex-direction: column;
-    }
-
-    #mainLogo {
-        display: flex;
-        justify-content: center;
-    }
-
-    nav ul  {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        margin: 25px 0 0 0;
-        justify-content: space-evenly;
-        gap: 9px;
-    }
+  
 
     /*HERO SECTION*/
     .heroSection {
@@ -1086,19 +894,6 @@ nav ul li a {
 
     .mainButton {
         font-size: 17px;
-    }
-
-    /* PRODUCT SECTION */
-
-    .productSection {
-        display: grid;
-        grid-template-columns: auto auto;
-        grid-template-rows: auto auto auto auto;
-        grid-template-areas: "productText productText"
-                             "producto1 producto2"
-                             "producto3 producto4"
-                             "producto5 producto6";
-        row-gap: 70px;
     }
 
     /* VER MAS SECTION */
@@ -1244,36 +1039,6 @@ nav ul li a {
                              "footer footer footer";
     }
 
-    /* NAV */
-    nav {
-        justify-content: space-between;
-    }
-
-    .logo {
-        width: 70px;
-        margin-left: 60px;
-        margin-top: 2px;
-    }
-
-    nav ul  {
-        display: flex;
-        align-items: center;
-        margin-right: 80px;
-    }
-
-    nav ul li a {
-        margin: 0px 10px;
-        padding: 25px 20px;
-    }
-
-
-    nav ul li a:hover {
-        background-color: rgb(255, 248, 241);
-        color: #368ca7;
-        transition: all .3s;
-
-    }
-
     /*HERO SECTION*/
     .heroSection {
         height: 95vh;
@@ -1306,17 +1071,6 @@ nav ul li a {
     }
 
     /* PRODUCT SECTION */
-
-    .productSection {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: auto auto auto;
-        grid-template-areas: "productText productText productText"
-                             "producto1 producto2 producto3"
-                             "producto4 producto5 producto6";
-        row-gap: 70px;
-    }
-
     .loQuiero:hover {
         background-color: rgb(255, 248, 241);
         color: #368ca7;
@@ -1365,7 +1119,7 @@ nav ul li a {
     .menuMain {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: auto auto auto auto auto auto auto auto;
+        grid-template-rows: auto auto auto auto auto auto auto;
         grid-template-areas: "menuText menuText menuText"
                              "productContainer1 productContainer2 productContainer3"
                              "productContainer4 productContainer5 productContainer6"
@@ -1373,6 +1127,7 @@ nav ul li a {
                              "productContainer13 productContainer14 productContainer15" "productContainer16 productContainer17 productContainer18";
         row-gap: 50px;
         margin-bottom: 30px;
+        height: auto;
     }
 
      /* --------------------------CONOCENOS------------------------- */
@@ -1477,32 +1232,6 @@ nav ul li a {
     }
 
     /* NAV */
-    nav {
-        justify-content: space-between;
-    }
-
-    .logo {
-        width: 70px;
-        margin-left: 60px;
-        margin-top: 2px;
-    }
-
-    nav ul  {
-        display: flex;
-        align-items: center;
-        margin-right: 80px;
-    }
-
-    nav ul li a {
-        margin: 0px 10px;
-        padding: 25px 20px;
-    }
-
-    nav ul li a:hover {
-        background-color: rgb(255, 248, 241);
-        color: #368ca7;
-        transition: all .3s;
-    }
 
     /*HERO SECTION*/
     .heroSection {
@@ -1535,18 +1264,9 @@ nav ul li a {
         transform: scale(1.2, 1.2);
     }
 
+    
+
     /* PRODUCT SECTION */
-
-    .productSection {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: auto auto auto;
-        grid-template-areas: "productText productText productText"
-                             "producto1 producto2 producto3"
-                             "producto4 producto5 producto6";
-        row-gap: 70px;
-    }
-
     .loQuiero:hover {
         background-color: rgb(255, 248, 241);
         color: #368ca7;

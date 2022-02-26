@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,15 +16,34 @@
 <body class="bodyIndex">
     <!-- CODIGO HEADER Y NAV -->
     <header>
-        <nav>
-            <a id="mainLogo"><img class="logo" src="imagenes/ab-ice-logoo.png" alt="logo"></a>               
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="paginas/menu.html">Menú</a></li>
-                <li><a href="paginas/conocenos.html">Conócenos</a></li>
-                <li><a href="paginas/ubicaciones.html">Ubicaciones</a></li>
-                <li><a href="paginas/contacto.html">Contacto</a></li>
-            </ul>  
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #368ca7; font-weight: 600; font-size: 20px;">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">
+                    <img id="mainLogo"><img class="logo" src="imagenes/ab-ice-logoo.png" alt="logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="paginas/menu.html">Menú</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="paginas/conocenos.html">Conócenos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="paginas/ubicaciones.html">Ubicaciones</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="paginas/contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
 
@@ -39,55 +60,103 @@
             </div>
         </section>
 
+        <!-- CODIGO PRODUTOS MAS VENDIDOS BOOTSTRAP -->
+        <div class="productText">
+            <h2 class="productTittle">¡Los más vendidos!</h2>
+            <h3 class="productSubtittle">Lo que todo el mundo está probando<br>¡Da clic para saber más!</h3>
+        </div>
+
+        <div class="container">
+            <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <a href="">
+                            <img src="imagenes/carrusel1.jpg" class="d-block w-100" alt="...">
+                        </a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="">
+                            <img src="imagenes/carrusel2.jpg" class="d-block w-100" alt="...">
+                        </a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="">
+                            <img src="imagenes/carrusel3.jpg" class="d-block w-100" alt="...">
+                        </a>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                    <span class="visually-hidden">Previous</span>
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+        </div>
+    
         <!-- CODIGO PRODUCTOS SECTION -->
-        <section class="productSection">
+        
+        <div class="container">
             <div class="productText">
                 <h2 class="productTittle">Date un antojo</h2>
                 <h3 class="productSubtittle">Echale un vistazo a nuestras mejores creaciones</h3>
             </div>
-            
-            <div class="producto1" id="productContainer">
-                <img class="imageProduct" src="imagenes/slashio-photography-uMYxldWYSZk-unsplash.jpg" alt="">
-                <h3 class="tittleProduct">Lorem, ipsum dolor.</h3>
-                <p class="textProduct">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto quasi adipisci nobis saepe sint ex? Totam debitis voluptates ut dolores?</p>
-                <a href=""><button class="loQuiero">Lo quiero</button></a>
-            </div>
 
-            <div class="producto2" id="productContainer">
-                <img class="imageProduct" src="imagenes/emile-mbunzama-cLpdEA23Z44-unsplash.jpg" alt="">
-                <h3 class="tittleProduct">Lorem, ipsum.</h3>
-                <p class="textProduct">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro soluta, eius voluptatibus qui odit sequi?</p>
-                <a href=""><button class="loQuiero">Lo quiero</button></a>
+            <div class="row">
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
+                    <div id="productContainer">
+                        <img class="imageProduct" src="imagenes/producto1.jpg" alt="">
+                        <h3 class="tittleProduct">Lorem, ipsum dolor.</h3>
+                        <p class="textProduct">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto quasi adipisci nobis saepe sint ex? Totam debitis voluptates ut dolores?</p>
+                        <a href=""><button class="loQuiero">Lo quiero</button></a>
+                    </div>
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
+                    <div id="productContainer">
+                        <img class="imageProduct" src="imagenes/producto2.jpg" alt="">
+                        <h3 class="tittleProduct">Lorem, ipsum.</h3>
+                        <p class="textProduct">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro soluta, eius voluptatibus qui odit sequi?</p>
+                        <a href=""><button class="loQuiero">Lo quiero</button></a>
+                    </div>
+                </div> 
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
+                    <div id="productContainer">
+                        <img class="imageProduct" src="imagenes/producto3.jpg" alt="">
+                        <h3 class="tittleProduct">Lorem ipsum dolor sit.</h3>
+                        <p class="textProduct">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab cum facere ad nesciunt ipsa voluptatem sit.</p>
+                        <a href=""><button class="loQuiero">Lo quiero</button></a>
+                    </div>
+                </div>
             </div>
-
-            <div class="producto3" id="productContainer">
-                <img class="imageProduct" src="imagenes/rachael-gorjestani-HLt6jQLf_J0-unsplash.jpg" alt="">
-                <h3 class="tittleProduct">Lorem ipsum dolor sit.</h3>
-                <p class="textProduct">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab cum facere ad nesciunt ipsa voluptatem sit.</p>
-                <a href=""><button class="loQuiero">Lo quiero</button></a>
+            <div class="row">
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
+                    <div id="productContainer">
+                        <img class="imageProduct" src="imagenes/producto4.jpg" alt="">
+                        <h3 class="tittleProduct">Lorem, ipsum.</h3>
+                        <p class="textProduct">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni tenetur alias assumenda velit quasi autem.</p>
+                        <a href=""><button class="loQuiero">Lo quiero</button></a>
+                    </div>
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
+                    <div id="productContainer">
+                        <img class="imageProduct" src="imagenes/producto5.jpg" alt="">
+                        <h3 class="tittleProduct">Lorem ipsum dolor sit.</h3>
+                        <p class="textProduct">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni praesentium eum recusandae corporis velit facere placeat cum dolore assumenda impedit?</p>
+                        <a href=""><button class="loQuiero">Lo quiero</button></a>
+                    </div>
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
+                    <div id="productContainer">
+                        <img class="imageProduct" src="imagenes/producto6.jpg" alt="">
+                        <h3 class="tittleProduct">Lorem, ipsum dolor.</h3>
+                        <p class="textProduct">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit inventore, libero commodi sed eos temporibus corporis dolores enim at debitis.</p>
+                        <a href=""><button class="loQuiero">Lo quiero</button></a>
+                    </div>
+                </div>
             </div>
-
-            <div class="producto4" id="productContainer">
-                <img class="imageProduct" src="imagenes/ian-dooley-TLD6iCOlyb0-unsplash (1).jpg" alt="">
-                <h3 class="tittleProduct">Lorem, ipsum.</h3>
-                <p class="textProduct">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni tenetur alias assumenda velit quasi autem.</p>
-                <a href=""><button class="loQuiero">Lo quiero</button></a>
-            </div>
-
-            <div class="producto5" id="productContainer">
-                <img class="imageProduct" src="imagenes/sheri-silver-5A0O12BIsjY-unsplash.jpg" alt="">
-                <h3 class="tittleProduct">Lorem ipsum dolor sit.</h3>
-                <p class="textProduct">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni praesentium eum recusandae corporis velit facere placeat cum dolore assumenda impedit?</p>
-                <a href=""><button class="loQuiero">Lo quiero</button></a>
-            </div>
-
-            <div class="producto6" id="productContainer">
-                <img class="imageProduct" src="imagenes/anna-bratiychuk-3w2AuRZeeSU-unsplash.jpg" alt="">
-                <h3 class="tittleProduct">Lorem, ipsum dolor.</h3>
-                <p class="textProduct">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit inventore, libero commodi sed eos temporibus corporis dolores enim at debitis.</p>
-                <a href=""><button class="loQuiero">Lo quiero</button></a>
-            </div>
-        </section>
+        </div>
         
         <!-- CODIGO VER MAS SECTION -->
         <section>
