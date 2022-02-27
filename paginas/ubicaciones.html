@@ -49,32 +49,68 @@
 
     <!-- CÓDIGO UBICACIONES -->
     <main>
-        <section class="ubicacionesMain">
+        <div class="container ubicacionesContainer d-flex flex-column justify-content-center">
             <div class="ubicacionesText">
                 <h1 class="ubicacionesTittle">¡Encuéntranos!</h1>
                 <h3 class="ubicacionesSubtittle">Encuentra tu AB Ice-cream más cercano</h3>
+                <p>Da clic en cada botón para saber la ubicación exacta</p>
             </div>
-    
-            <div class="ubicaciones1">
-                <h2 class="ubicacionesSucursal">Sucursal Centro</h2>
-                <iframe class="ubicacionesMap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.4637172481057!2d-99.14242578461258!3d19.435563845621058!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f92b7db7aa9f%3A0x3a13edcd4e09d717!2sCalle%20de%20Tacuba%201%2C%20Centro%20Hist%C3%B3rico%20de%20la%20Cdad.%20de%20M%C3%A9xico%2C%20Centro%2C%20Cuauht%C3%A9moc%2C%2006000%20Centro%2C%20CDMX!5e0!3m2!1sen!2smx!4v1644110546572!5m2!1sen!2smx" width="1000" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            
+            <div class="container ubicacionesContainer">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-lg-4 d-flex justify-content-center">
+                        <p>
+                            <a class="btn" data-bs-toggle="collapse" href="#sucursalNorte" role="button" aria-expanded="false" aria-controls="sucursalNorte">Zona Norte</a>
+                        </p>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-lg-4 d-flex justify-content-center">
+                        <p>
+                            <a class="btn" data-bs-toggle="collapse" href="#sucursalCentro" role="button" aria-expanded="false" aria-controls="sucursalCentro">Zona Centro</a>
+                        </p>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-lg-4 d-flex justify-content-center">
+                        <p>
+                            <a class="btn" data-bs-toggle="collapse" href="#sucursalSur" role="button" aria-expanded="false" aria-controls="sucursalSur">Zona Sur</a>
+                        </p>
+                    </div>
+                </div>
             </div>
-    
-            <div class="ubicaciones2">
-                <h2 class="ubicacionesSucursal">Sucursal Norte</h2>
-                <iframe class="ubicacionesMap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.4637172481057!2d-99.14242578461258!3d19.435563845621058!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f92b7db7aa9f%3A0x3a13edcd4e09d717!2sCalle%20de%20Tacuba%201%2C%20Centro%20Hist%C3%B3rico%20de%20la%20Cdad.%20de%20M%C3%A9xico%2C%20Centro%2C%20Cuauht%C3%A9moc%2C%2006000%20Centro%2C%20CDMX!5e0!3m2!1sen!2smx!4v1644110546572!5m2!1sen!2smx" width="1000" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <div class="collapse" id="sucursalNorte">
+                <div class="card card-body">
+                    <div class="container d-flex flex-column align-items-center">
+                        <h2>Sucursal Norte</h2>
+                        <p>¡Visítanos!</p>
+                        <div class="container map">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.4637172481057!2d-99.14242578461258!3d19.435563845621058!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f92b7db7aa9f%3A0x3a13edcd4e09d717!2sCalle%20de%20Tacuba%201%2C%20Centro%20Hist%C3%B3rico%20de%20la%20Cdad.%20de%20M%C3%A9xico%2C%20Centro%2C%20Cuauht%C3%A9moc%2C%2006000%20Centro%2C%20CDMX!5e0!3m2!1sen!2smx!4v1644110546572!5m2!1sen!2smx" width="1000" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div> 
+                </div>
             </div>
-    
-            <div class="ubicaciones3">
-                <h2 class="ubicacionesSucursal">Sucursal Sur</h2>
-                <iframe class="ubicacionesMap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.4637172481057!2d-99.14242578461258!3d19.435563845621058!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f92b7db7aa9f%3A0x3a13edcd4e09d717!2sCalle%20de%20Tacuba%201%2C%20Centro%20Hist%C3%B3rico%20de%20la%20Cdad.%20de%20M%C3%A9xico%2C%20Centro%2C%20Cuauht%C3%A9moc%2C%2006000%20Centro%2C%20CDMX!5e0!3m2!1sen!2smx!4v1644110546572!5m2!1sen!2smx" width="1000" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-            </div>
-        </section>
 
-        <section class="whatsappContainer">
-            <a href=""><img class="whatsapp" src="../imagenes/whatsapp-logo-11.png" alt=""></a>
-        </section>
+            <div class="collapse" id="sucursalCentro">
+                <div class="card card-body">
+                    <div class="container d-flex flex-column align-items-center">
+                        <h2>Sucursal Centro</h2>
+                        <p>¡Visítanos!</p>
+                        <div class="container map">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.4637172481057!2d-99.14242578461258!3d19.435563845621058!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f92b7db7aa9f%3A0x3a13edcd4e09d717!2sCalle%20de%20Tacuba%201%2C%20Centro%20Hist%C3%B3rico%20de%20la%20Cdad.%20de%20M%C3%A9xico%2C%20Centro%2C%20Cuauht%C3%A9moc%2C%2006000%20Centro%2C%20CDMX!5e0!3m2!1sen!2smx!4v1644110546572!5m2!1sen!2smx" width="1000" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div> 
+                </div>
+            </div>
 
+            <div class="collapse" id="sucursalSur">
+                <div class="card card-body">
+                    <div class="container d-flex flex-column align-items-center">
+                        <h2>Sucursal Sur</h2>
+                        <p>¡Visítanos!</p>
+                        <div class="container map">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.4637172481057!2d-99.14242578461258!3d19.435563845621058!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f92b7db7aa9f%3A0x3a13edcd4e09d717!2sCalle%20de%20Tacuba%201%2C%20Centro%20Hist%C3%B3rico%20de%20la%20Cdad.%20de%20M%C3%A9xico%2C%20Centro%2C%20Cuauht%C3%A9moc%2C%2006000%20Centro%2C%20CDMX!5e0!3m2!1sen!2smx!4v1644110546572!5m2!1sen!2smx" width="1000" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </div>
     </main>
 
     <!-- CÓDIGO FOOTER -->
