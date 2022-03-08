@@ -1,1108 +1,463 @@
-/* ESTILOS GENERALES PAGINA */
-* {
-    padding: 0;
-    margin: 0;
-}
-
-h1, h2, h3, p {
-    font-family: 'Rubik';
-}
-
-h2 {
-    font-weight: 400;
-}
-
-h3 {
-    font-weight: 300;
-}
-
-header {
-    grid-area: header;
-    background-color: #79d1cd;
-    height: auto;
-}
-
-body {
-    background-color: rgb(255, 248, 241);
-}
-
-main {
-    grid-area: main;
-    height: auto;
-}
-
-footer {
-    grid-area: footer;
-    background-color: #79d1cd;
-}
-
-.btn {
-    font-family: 'Montserrat';
-    border-radius: 25px;
-    background-color: rgb(255, 248, 241);
-    color: #533e2d;
-    border: 3px solid #533e2d;
-    font-weight: 600;
-    padding: 15px;
-}
-
-.btn:hover {
-    background-color: #79d1cd;
-    color: #f6f6f6;
-    transition: .2s;
-}
-
-/* ESTILOS GENERALES NAV */
-nav {
-    display: flex;
-}
-
-.logo {
-    width: 70px;
-}
-
-nav ul li {
-    list-style: none;
-}
-
-nav ul li a {
-    text-decoration: none;
-    font-weight: 600;
-    font-family: 'Montserrat';
-}
-
-.navbar-dark .navbar-nav .nav-link {
-    color: #533e2d;
-    padding: 15px;
-}
-
-.navbar-dark .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2883, 62, 45, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-}
-
-.navbar-dark .navbar-toggler {
-    border: 3px solid #533e2d;
-    margin-right: 10px;
-}
-
-/* ---------------------------------INDEX--------------------------------- */
-/* ESTILOS GENERALES HERO */
+@charset "UTF-8";
 .heroMain {
-    background-image: url(../imagenes/heroback4.png);
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: bottom;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 90vh;
-    margin: 80px 0 0 0;
-}
+  background-image: url(../imagenes/heroback4.png);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 90vh;
+  margin: 80px 0 0 0; }
+
 .mainContainer {
-    display: flex;
-    flex-direction: column;
-    align-items:flex-start;
-    justify-content: center;
-    margin: 10%;
-}
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 10%; }
 
 .mainTittle {
-    padding-bottom: 10px 0;
-    font-weight: 600;
-    color: #f6f6f6;
-}
+  padding-bottom: 10px 0;
+  font-weight: 600;
+  color: #f6f6f6; }
 
 .mainSubtittle {
-    color: #f6f6f6;
-    font-weight: 600;
-}
+  color: #f6f6f6;
+  font-weight: 600; }
 
 .mainText {
-    color: #f6f6f6;
-    font-weight: 400;
-}
+  color: #f6f6f6;
+  font-weight: 400; }
 
-/* GENERALES MAS VENDIDOS */
 .masVendidos {
-    margin-top: 100px;
-    margin-bottom: 50px;
-}
+  margin-top: 100px;
+  margin-bottom: 50px; }
 
-.masTittle{
-    font-size: 60px;
-    margin: 20px 0;
-    font-weight: 400;
-}
+.masTittle {
+  font-size: 60px;
+  margin: 20px 0;
+  font-weight: 400; }
 
 .masSubtittle {
-    font-size: 30px;
-    margin: 20px 0;
-    font-weight: 300;
-}
+  font-size: 30px;
+  margin: 20px 0;
+  font-weight: 300; }
 
 .d-block {
-    border-radius: 15px;
-}
+  border-radius: 15px; }
 
-/* GENERALES PRODUCT */
 .productContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  padding: 30px 30px; }
+  .productContainer a {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-    padding: 30px 30px;
-}
-
-.productContainer a {
-    display: flex;
-    justify-content: center;
-}
+    justify-content: center; }
 
 .productText {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    margin: 100px 0 30px 0;
-}
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 100px 0 30px 0; }
 
 .productTittle {
-    font-size: 60px;
-}
+  font-size: 60px; }
 
 .productSubtittle {
-    margin-top: 20px;
-    font-size: 30px;
-}
+  margin-top: 20px;
+  font-size: 30px; }
 
 .imageContainer {
-    overflow: hidden;
-    border-radius: 13px;
-}
+  overflow: hidden;
+  border-radius: 13px; }
 
 .imageProduct {
-    width: 300px;
-    height: 400px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transition: transform .5s ease;
-}
+  width: 300px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: transform .5s ease; }
 
 .tittleProduct {
-    margin: 20px 0;
-    text-align: center;
-}
+  margin: 20px 0;
+  text-align: center; }
 
 .textProduct {
-    text-align: justify;
-    padding: 0 30px;
-}
+  text-align: justify;
+  padding: 0 30px; }
 
 .buttonContainer {
-    overflow:visible;
-}
+  overflow: visible; }
+  .buttonContainer a {
+    text-decoration: none; }
 
-.buttonContainer a {
-    text-decoration: none;
-}
-
-/* GENERALES VER MAS */
 .verMas {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-image: url('../imagenes/pexels-nappy-936000mob.png');
-    height: 800px;
-    margin-top: 40px;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: url("../imagenes/pexels-nappy-936000mob.png");
+  height: 800px;
+  margin-top: 40px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
 
 .textMas {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.textMas h2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center; }
+  .textMas h2 {
     color: #f6f6f6;
     font-size: 60px;
-    margin: 30px 0;
-}
+    margin: 30px 0; }
 
-.buttonMas {
-    padding: 15px 20px;
-    background-color: #368ca7;
-    color: rgb(255, 248, 241);
-    font-family: 'Montserrat Alternates';
-    font-weight: 600;
-    border-radius: 25px;
-    border: none;
-    cursor: pointer;
-}
-
-/* GENERALES WHATSAPP */
-.whatsapp {
-    width: 60px;
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    padding: 0 10px 15px 0;
-}
-
-/* GENERALES FOOTER */
-.logoFooter {
-    grid-area: logoFooter;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-.logoFooter img {
-    width: 90px;
-    margin-left: 15%;
-}
-
-.redesFooter {
-    grid-area: redesFooter;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.bi {
-    color: #533e2d;
-}
-
-.redes {
-    width: 40px;
-}
-
-.navFooter {
-    grid-area: navFooter;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
-
-.ulFooter {
-    display: flex;
-    align-items: flex-end;
-    gap: 5px;
-}
-
-.ulFooter li {
-    list-style: none;
-}
-
-.ulFooter li a {
-     text-decoration: none;
-     color: #533e2d;
-     font-size: 20px;
-     font-family: "Montserrat";
-     font-weight: 600;
-}
-
-.buttonFooter {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-    font-family: 'Montserrat Alternates';
-    font-size: 17px;
-    color: #533e2d;
-    grid-area: buttonFooter;
-}
-
-.buttonFooter a {
-    text-decoration: none;
-    color: #533e2d;
-}
-
-/* -------------------------- GENERALES MENU ---------------------------- */
-/* GENERALES MENU */
-#productContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.menuText {
-    margin-bottom: 70px;
-    padding-top: 70px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.menuTittle {
-    font-size: 40px;
-    padding: 0 10px;
-}
-
-
-/* --------------------------- GENERALES CONOCENOS --------------------------- */
-
-#conocenosP {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: justify;
-    padding: 0 30px;
-}
-
-#conocenosImage {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.conocenosGrid img {
-    width: 600px;
-    border-radius: 10px;
-    margin: 50px 0;
-}
-
-.conocenosP1 {
-    grid-area: conocenosP1;  
-}
-
-.conocenosP2 {
-    grid-area: conocenosP2;
-}
-
-.conocenosP3 {
-    grid-area: conocenosP3;
-}
-
-.conocenosImage1 {
-    grid-area: conocenosImage1;
-}
-
-.conocenosImage2 {
-    grid-area: conocenosImage2;
-}
-
-.visitanos {
-    background-image: url(../imagenes/heroback2.png);
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 500px;
-    margin-top: 100px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: #f6f6f6;
-}
-
-.cabeceraConocenos {
-    background-image: url(../imagenes/conocenoscabecera.png);
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: top;
-    height: 75vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 80px 0 30px 0;
-}
-
-.cabeceraConocenos h1 {
-    color: #f6f6f6;
-    font-size: 70px;
-    text-align: center;
-}
-
-/* ------------------------- GENERALES UBICACIONES ---------------------- */
-.ubicacionesText {
-    margin: 30px 0;
-    grid-area: ubicacionesText;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.ubicacionesTittle {
-    text-align: center;
-}
-
-.ubicacionesSubtittle {
-    text-align: center;
-}
-
-.ubicacionesP {
-    display: flex;
-    justify-content: center;
-}
-
-.map {
-    overflow:hidden;
-    padding-bottom:56.25%;
-    position:relative;
-    height:0;
-}
-
-.map iframe{
-    left:0;
-    top:0;
-    height:100%;
-    width:100%;
-    position:absolute;
-}
-
-.ubicacionesContainer {
-    margin-bottom: 100px;
-}
-
-/* -------------------------- GENERALES CONTACTO ------------------------  */
-.contactoText {
-    margin: 30px 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.contactoTittle, .contactoSubtittle {
-    text-align: center;
-    margin: 15px 0;
-}
-
-.contactoFlex {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-#contactForm {
-    margin: 10px 0 100px 0;
-}
-
-.form-control {
-    font-family: 'Montserrat';
-    border-radius: 20px;
-    background-color: rgb(255, 248, 241);
-    color: #368ca7;
-    font-weight: 600;
-    border: 3px solid;
-    border-color: #368ca7;
-}
-.form-label {
-    font-family: 'Montserrat';
-   font-size: 25px;
-}
-
-/* QUERY PARA MOVILES */
 @media screen and (min-width: 320px) and (max-width: 599px) {
-    /* --------------------------INDEX------------------------ */
-    /* ESTILOS GENERALES */
-    .bodyIndex {
-        display: grid;
-        grid-template-columns: auto;
-        grid-template-rows: auto auto auto;
-        grid-template-areas: "header"
-                             "main"
-                             "footer";
-    }
-
-    /*HERO SECTION*/    
-    .mainTittle {
-        font-size: 30px;
-    }
-
-    .mainSubtittle {
-        font-size: 40px;
-    }
-
-    .mainText {
-        font-size: 25px;
-    }
-
-    .mainButton {
-        font-size: 13px;
-    }
-
-    /* GENERALES MAS VENDIDOS */
-    .masVendidosContainer {
-        text-align: center;
-    }
-
-    .containerCarousel {
-        margin-top: 40px;
-    }
-    .productP {
-        font-size: 25px;
-        margin: 20px 0;
-    }
-
-    /* VER MAS SECTION */
-    .buttonMas {
-        font-size: 13px;
-    }
-
-    /* WHATSAPP */
-    .whatsapp {
-        display: none;
-    }
-
-    /* FOOTER */
-
-    footer {
-        padding: 0 15px;
-        display: grid;
-        height: auto;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 150px 200px 70px;
-        grid-template-areas: "redesFooter redesFooter"
-                             "logoFooter navFooter"
-                             "buttonFooter buttonFooter";
-    }
-
-    .ulFooter {
-        flex-direction: column;
-        align-items: flex-end;
-    }
-
-    /* --------------------------CONOCENOS------------------------- */
-    .conocenosGrid {
-        display: grid;
-        grid-template-columns: 100%;
-        grid-template-rows: auto auto auto auto auto;
-        grid-template-areas: "conocenosP1"
-                             "conocenosImage1"
-                             "conocenosP2"
-                             "conocenosImage2"
-                             "conocenosP3";
-    }
-
-     .cabeceraConocenos {
-        height: 35vh;
-    }
-
-    .cabeceraConocenos h1 {
-        font-size: 35px;
-    }
-
-    .conocenosGrid img {
-        width: 90%;
-    }
-
-    /* --------------------- UBICACIONES --------------------- */
-    .ubicacionesTittle {
-        font-size: 40px;
-        margin: 20px 0;
-    }
-
-    .ubicacionesSubtittle {
-        font-size: 25px;
-        margin: 15px 0;
-    }
-
-    /* ------------------------- CONTACTO --------------------- */
-    .contactoTittle {
-        font-size: 30px;
-    }
-
-    .contactoSubtittle {
-        font-size: 25px;
-    }
-}
+  /* --------------------------INDEX------------------------ */
+  /* ESTILOS GENERALES */
+  .bodyIndex {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "header" "main" "footer"; }
+  /*HERO SECTION*/
+  .mainTittle {
+    font-size: 30px; }
+  .mainSubtittle {
+    font-size: 40px; }
+  .mainText {
+    font-size: 25px; }
+  .mainButton {
+    font-size: 13px; }
+  /* GENERALES MAS VENDIDOS */
+  .masVendidosContainer {
+    text-align: center; }
+  .containerCarousel {
+    margin-top: 40px; }
+  .productP {
+    font-size: 25px;
+    margin: 20px 0; } }
 
 /* QUERY PARA TABLETAS PEQUEÑAS */
 @media screen and (min-width: 600px) and (max-width: 767px) {
-    /* ESTILOS GENERALES */
-    .bodyIndex {
-        display: grid;
-        grid-template-columns: 50% 50%;
-        grid-template-rows: auto auto auto;
-        grid-template-areas: "header header"
-                             "main main"
-                             "footer footer";
-    }
-
-    /*HERO SECTION*/
-    .mainTittle {
-        font-size: 40px;
-    }
-
-    .mainSubtittle {
-        font-size: 40px;
-    }
-
-    .mainText {
-        font-size: 25px;
-    }
-
-    .mainButton {
-        font-size: 14px;
-    }
-
-    /* GENERALES MAS VENDIDOS */
-    .masVendidosContainer {
-        text-align: center;
-    }
-
-    .containerCarousel {
-        margin-top: 40px;
-    }
-    .productP {
+  /* ESTILOS GENERALES */
+  .bodyIndex {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "header header" "main main" "footer footer"; }
+  /*HERO SECTION*/
+  .mainTittle {
+    font-size: 40px; }
+  .mainSubtittle {
+    font-size: 40px; }
+  .mainText {
+    font-size: 25px; }
+  .mainButton {
+    font-size: 14px; }
+  /* GENERALES MAS VENDIDOS */
+  .masVendidosContainer {
+    text-align: center; }
+  .containerCarousel {
+    margin-top: 40px; }
+  .productP {
     font-size: 25px;
-    margin: 20px 0;
-    }
-
-    /* VER MAS SECTION */
-    .buttonMas {
-        font-size: 15px;
-    }
-
-    .whatsapp {
-        display: none;
-    }
-
-    /* FOOTER */
-
-    footer {
-        padding: 0 15px;
-        display: grid;
-        height: auto;
-        grid-template-columns: 20% 80%;
-        grid-template-rows: 150px 200px 70px;
-        grid-template-areas: "redesFooter redesFooter"
-                             "logoFooter navFooter"
-                             "buttonFooter buttonFooter";
-    }
-
-    .ulFooter {
-        gap: 20px;
-    }
-
-    .ulFooter li a {
-        font-size: 17px;
-    }
-
-     /* --------------------------CONOCENOS------------------------- */
-     .conocenosGrid {
-        display: grid;
-        grid-template-columns: 100%;
-        grid-template-rows: auto auto auto auto auto;
-        grid-template-areas: "conocenosP1"
-                             "conocenosImage1"
-                             "conocenosP2"
-                             "conocenosImage2"
-                             "conocenosP3";
-    }
-
-     .cabeceraConocenos {
-        height: 40vh;
-    }
-
-    .cabeceraConocenos h1 {
-        font-size: 50px;
-    }
-
-    .conocenosGrid img {
-        width: 500px;
-    }
-    /* --------------------- UBICACIONES --------------------- */
-    .ubicacionesTittle {
-        font-size: 40px;
-        margin: 20px 0;
-    }
-
-    .ubicacionesSubtittle {
-        font-size: 25px;
-        margin: 15px 0;
-    }
-
-    /* ------------------------- CONTACTO --------------------- */
-    .contactoTittle {
-        font-size: 40px;
-    }
-
-    .contactoSubtittle {
-        font-size: 30px;
-    }
-}
+    margin: 20px 0; } }
 
 /* QUERY PARA TABLETAS */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-    /* ESTILOS GENERALES */
-    .bodyIndex {
-        display: grid;
-        grid-template-columns: 50% 50%;
-        grid-template-rows: auto auto auto;
-        grid-template-areas: "header header"
-                             "main main"
-                             "footer footer";
-    }
-
-    /*HERO SECTION*/    
-    .heroSection {
-        height: 90vh;
-    }
-
-    .mainTittle {
-        font-size: 45px;
-    }
-
-    .mainSubtittle {
-        font-size: 50px;
-    }
-
-    .mainText {
-        font-size: 30px;
-    }
-
-    .mainButton {
-        font-size: 17px;
-    }
-
-    /* GENERALES MAS VENDIDOS */
-    .masVendidosContainer {
-        text-align: center;
-    }
-
-    .containerCarousel {
-        margin-top: 40px;
-    }
-    .productP {
+  /* ESTILOS GENERALES */
+  .bodyIndex {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "header header" "main main" "footer footer"; }
+  /*HERO SECTION*/
+  .heroSection {
+    height: 90vh; }
+  .mainTittle {
+    font-size: 45px; }
+  .mainSubtittle {
+    font-size: 50px; }
+  .mainText {
+    font-size: 30px; }
+  .mainButton {
+    font-size: 17px; }
+  /* GENERALES MAS VENDIDOS */
+  .masVendidosContainer {
+    text-align: center; }
+  .containerCarousel {
+    margin-top: 40px; }
+  .productP {
     font-size: 25px;
-    margin: 20px 0;
-    }
-
-    /* VER MAS SECTION */
-
-    .buttonMas {
-        font-size: 16px;
-    }
-
-    /* FOOTER */
-
-    footer {
-        padding: 0 15px;
-        display: grid;
-        height: auto;
-        grid-template-columns: 20% 80%;
-        grid-template-rows: 150px 200px 70px;
-        grid-template-areas: "redesFooter redesFooter"
-                             "logoFooter navFooter"
-                             "buttonFooter buttonFooter";
-    }
-
-    .ulFooter {
-        gap: 20px;
-    }
-
-
-    /* --------------------------CONOCENOS------------------------- */
-    .conocenosGrid {
-        display: grid;
-        grid-template-columns: 50% 50%;
-        grid-template-rows: auto auto auto;
-        grid-template-areas: "conocenosP1 conocenosImage1"
-                             "conocenosP2 conocenosP2"
-                             "conocenosP3 conocenosImage2";
-    }
-
-     .cabeceraConocenos {
-        height: 50vh;
-    }
-
-    .cabeceraConocenos h1 {
-        font-size: 50px;
-    }
-
-    .conocenosGrid img {
-        width: 400px;
-    }
-
-    /* --------------------- UBICACIONES --------------------- */
-    .ubicacionesTittle {
-        font-size: 40px;
-        margin: 20px 0;
-    }
-
-    .ubicacionesSubtittle {
-        font-size: 25px;
-        margin: 15px 0;
-    }
-
-    /* ------------------------- CONTACTO --------------------- */
-    .contactoTittle {
-        font-size: 40px;
-    }
-
-    .contactoSubtittle {
-        font-size: 30px;
-    }
-}
+    margin: 20px 0; } }
 
 /* QUERY PARA NOTEBOOKS */
 @media screen and (min-width: 1024px) and (max-width: 1999px) {
-     /* ESTILOS GENERALES */
-     .bodyIndex {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: auto auto auto;
-        grid-template-areas: "header header header"
-                             "main main main"
-                             "footer footer footer";
-    }
-
-    /* NAV */
-    .navbar-dark .navbar-nav .nav-link:hover {
-        background-color: #533e2d;
-        color: #79d1cd;
-        border-radius: 5px;
-    }
-
-    /*HERO SECTION*/   
-    .heroMain h1 {
-        font-size: 60px;
-    }
-
-    .heroMain h2 {
-        font-size: 70px;
-    }
-
-    .heroMain p {
-        font-size: 25px;
-    }
-
-    .mainButton {
-        font-size: 17px;
-    }
-
-    
-    /* PRODUCT SECTION */
-    .imageProduct:hover {
-        transform: scale(1.3);
-    }
-
-    .loQuiero:hover {
-        transform: scale(1.2);
-    }
-
-    /* VER MAS SECTION */
-    .buttonMas {
-        font-size: 17px;
-    }
-
-    .buttonMas:hover {
-        padding: 12px 17px;
-        background-color: rgb(255, 248, 241);
-        color: #368ca7;
-        border: 3px solid;
-        border-color: #368ca7;
-        transition: .2s;
-    }
-
-    /* FOOTER */
-
-    footer {
-        padding: 0 15px;
-        display: grid;
-        height: auto;
-        grid-template-columns: 20% 80%;
-        grid-template-rows: 150px 200px 70px;
-        grid-template-areas: "redesFooter redesFooter"
-                             "logoFooter navFooter"
-                             "buttonFooter buttonFooter";
-    }
-
-    .ulFooter {
-        gap: 30px;
-    }
-
-    .ulFooter li a:hover {
-        color: #f6f6f6;
-        transition: .2s;
-    }
-
-    .bi:hover {
-        transform: scale(1.4);
-        transition: .2s; 
-    }
-
-     /* --------------------------CONOCENOS------------------------- */
-     .conocenosGrid {
-        display: grid;
-        grid-template-columns: 50% 50%;
-        grid-template-rows: auto auto auto auto;
-        grid-template-areas: "conocenosP1 conocenosImage1"
-                             "conocenosP2 conocenosP2"
-                             "conocenosP3 conocenosImage2";
-    }
-
-     .cabeceraConocenos {
-        height: 60vh;
-    }
-
-    .cabeceraConocenos h1 {
-        font-size: 50px;
-    }
-
-     /* --------------------- UBICACIONES --------------------- */
-    .ubicacionesTittle {
-        font-size: 40px;
-        margin: 20px 0;
-    }
-
-    .ubicacionesSubtittle {
-        font-size: 25px;
-        margin: 15px 0;
-    }
-
-    /* ------------------------- CONTACTO --------------------- */
-    .contactoTittle {
-        font-size: 40px;
-    }
-
-    .contactoSubtittle {
-        font-size: 30px;
-    }
-}
+  /* ESTILOS GENERALES */
+  .bodyIndex {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "header header header" "main main main" "footer footer footer"; }
+  /*HERO SECTION*/
+  .heroMain h1 {
+    font-size: 60px; }
+  .heroMain h2 {
+    font-size: 70px; }
+  .heroMain p {
+    font-size: 25px; }
+  .mainButton {
+    font-size: 17px; }
+  /* PRODUCT SECTION */
+  .imageProduct:hover {
+    transform: scale(1.3); }
+  .loQuiero:hover {
+    transform: scale(1.2); } }
 
 /* QUERY PARA PANTALLAS GRANDES */
 @media screen and (min-width: 1200px) {
-    /* ESTILOS GENERALES */
-    .bodyIndex {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: auto auto auto;
-        grid-template-areas: "header header header"
-                             "main main main"
-                             "footer footer footer";
-    }
+  /* ESTILOS GENERALES */
+  .bodyIndex {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "header header header" "main main main" "footer footer footer"; }
+  /*HERO SECTION*/
+  .heroMain h1 {
+    font-size: 60px; }
+  .heroMain h2 {
+    font-size: 70px; }
+  .heroMain p {
+    font-size: 25px; }
+  .mainButton {
+    font-size: 17px; }
+  /* PRODUCT SECTION */
+  .imageProduct:hover {
+    transform: scale(1.3); }
+  .loQuiero:hover {
+    transform: scale(1.2); } }
 
-    /* NAV */
-   .navbar-dark .navbar-nav .nav-link:hover {
-        background-color: #533e2d;
-        color: #79d1cd;
-        border-radius: 5px;
-    }
+/* ESTILOS GENERALES NAV */
+.logo {
+  width: 70px; }
 
-    /*HERO SECTION*/
-    .heroMain h1 {
-        font-size: 60px;
-    }
+nav li {
+  list-style: none; }
 
-    .heroMain h2 {
-        font-size: 70px;
-    }
+nav a {
+  text-decoration: none;
+  font-weight: 600;
+  font-family: 'Montserrat'; }
 
-    .heroMain p {
-        font-size: 25px;
-    }
+.navbar-dark .navbar-nav .nav-link {
+  color: #533e2d;
+  padding: 15px; }
 
-    .mainButton {
-        font-size: 17px;
-    }
+.navbar-dark .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2883, 62, 45, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"); }
 
-       
+.navbar-dark .navbar-toggler {
+  border: 3px solid #533e2d;
+  margin-right: 10px; }
 
-    /* PRODUCT SECTION */
-    .imageProduct:hover {
-        transform: scale(1.3);
-    }
+/* QUERY PARA NOTEBOOKS */
+@media screen and (min-width: 1024px) and (max-width: 1999px) {
+  .navbar-dark .navbar-nav .nav-link:hover {
+    background-color: #533e2d;
+    color: #79d1cd;
+    border-radius: 5px; } }
 
-    .loQuiero:hover {
-        transform: scale(1.2);
-    }
-    
-    /* VER MAS SECTION */
-    .buttonMas {
-        font-size: 17px;
-    }
+/* QUERY PARA PANTALLAS GRANDES */
+@media screen and (min-width: 1200px) {
+  .navbar-dark .navbar-nav .nav-link:hover {
+    background-color: #533e2d;
+    color: #79d1cd;
+    border-radius: 5px; } }
 
-    .buttonMas:hover {
-        padding: 12px 17px;
-        background-color: rgb(255, 248, 241);
-        color: #368ca7;
-        border: 3px solid;
-        border-color: #368ca7;
-        transition: .2s;
-    }
+.whatsapp {
+  width: 60px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 0 10px 15px 0; }
 
-    /* FOOTER */
+.logoFooter {
+  grid-area: logoFooter;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center; }
+  .logoFooter img {
+    width: 90px;
+    margin-left: 15%; }
 
-    footer {
-        padding: 0 15px;
-        display: grid;
-        height: auto;
-        grid-template-columns: 20% 80%;
-        grid-template-rows: 150px 200px 70px;
-        grid-template-areas: "redesFooter redesFooter"
-                             "logoFooter navFooter"
-                             "buttonFooter buttonFooter";
-    }
+.redesFooter {
+  grid-area: redesFooter;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center; }
 
-    .ulFooter {
-        gap: 30px;
-    }
+.bi {
+  color: #533e2d; }
 
-    .bi:hover {
-        transform: scale(1.4);
-        transition: .2s; 
-    }
+.redes {
+  width: 40px; }
 
+.navFooter {
+  grid-area: navFooter;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center; }
+
+.ulFooter {
+  display: flex;
+  align-items: flex-end;
+  gap: 5px; }
+  .ulFooter li {
+    list-style: none; }
+  .ulFooter a {
+    text-decoration: none;
+    color: #533e2d;
+    font-size: 20px;
+    font-family: "Montserrat";
+    font-weight: 600; }
+
+.buttonFooter {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  font-family: 'Montserrat Alternates';
+  font-size: 17px;
+  color: #533e2d;
+  grid-area: buttonFooter; }
+  .buttonFooter a {
+    text-decoration: none;
+    color: #533e2d; }
+
+/* QUERY PARA MOVILES */
+@media screen and (min-width: 320px) and (max-width: 599px) {
+  footer {
+    padding: 0 15px;
+    display: grid;
+    height: auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 150px 200px 70px;
+    grid-template-areas: "redesFooter redesFooter" "logoFooter navFooter" "buttonFooter buttonFooter"; }
+  .ulFooter {
+    flex-direction: column;
+    align-items: flex-end; } }
+
+/* QUERY PARA TABLETAS PEQUEÑAS */
+@media screen and (min-width: 600px) and (max-width: 767px) {
+  footer {
+    padding: 0 15px;
+    display: grid;
+    height: auto;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 150px 200px 70px;
+    grid-template-areas: "redesFooter redesFooter" "logoFooter navFooter" "buttonFooter buttonFooter"; }
+  .ulFooter {
+    gap: 20px; }
+    .ulFooter li a {
+      font-size: 17px; } }
+
+/* QUERY PARA TABLETAS */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  footer {
+    padding: 0 15px;
+    display: grid;
+    height: auto;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 150px 200px 70px;
+    grid-template-areas: "redesFooter redesFooter" "logoFooter navFooter" "buttonFooter buttonFooter"; }
+  .ulFooter {
+    gap: 20px; } }
+
+/* QUERY PARA NOTEBOOKS */
+@media screen and (min-width: 1024px) and (max-width: 1999px) {
+  footer {
+    padding: 0 15px;
+    display: grid;
+    height: auto;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 150px 200px 70px;
+    grid-template-areas: "redesFooter redesFooter" "logoFooter navFooter" "buttonFooter buttonFooter"; }
+  .ulFooter {
+    gap: 30px; }
     .ulFooter li a:hover {
-        color: #f6f6f6;
-        transition: .2s;
-    }
+      color: #f6f6f6;
+      transition: .2s; }
+  .bi:hover {
+    transform: scale(1.4);
+    transition: .2s; } }
 
-    /* --------------------------CONOCENOS------------------------- */
-    .conocenosGrid {
-        height: auto;
-        display: grid;
-        grid-template-columns: 50% 50%;
-        grid-template-rows: auto auto auto auto;
-        grid-template-areas: "conocenosP1 conocenosImage1"
-                             "conocenosP2 conocenosP2"
-                             "conocenosP3 conocenosImage2";
-    }
+/* QUERY PARA PANTALLAS GRANDES */
+@media screen and (min-width: 1200px) {
+  footer {
+    padding: 0 15px;
+    display: grid;
+    height: auto;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 150px 200px 70px;
+    grid-template-areas: "redesFooter redesFooter" "logoFooter navFooter" "buttonFooter buttonFooter"; }
+  .ulFooter {
+    gap: 30px; }
+    .ulFooter li a:hover {
+      color: #f6f6f6;
+      transition: .2s; }
+  .bi:hover {
+    transform: scale(1.4);
+    transition: .2s; } }
 
-    .cabeceraConocenos {
-        height: 60vh;
-    }
+* {
+  padding: 0;
+  margin: 0; }
 
-    .cabeceraConocenos h1 {
-        font-size: 60px;
-    }
+h1, h2, h3, p {
+  font-family: "Rubik"; }
 
-    /* --------------------- UBICACIONES --------------------- */
-    .ubicacionesTittle {
-        font-size: 40px;
-        margin: 20px 0;
-    }
+h2 {
+  font-weight: 400; }
 
-    .ubicacionesSubtittle {
-        font-size: 25px;
-        margin: 15px 0;
-    }
+h3 {
+  font-weight: 300; }
 
-    /* ------------------------- CONTACTO --------------------- */
-    .contactoTittle {
-        font-size: 40px;
-    }
+header {
+  grid-area: header;
+  background-color: #79d1cd;
+  height: auto; }
 
-    .contactoSubtittle {
-        font-size: 30px;
-    }
-}
+body {
+  background-color: #fff8f1; }
+
+main {
+  grid-area: main;
+  height: auto; }
+
+footer {
+  grid-area: footer;
+  background-color: #79d1cd; }
+
+.btn {
+  font-family: 'Montserrat';
+  border-radius: 25px;
+  background-color: #fff8f1;
+  color: #533e2d;
+  border: 3px solid #79d1cd;
+  font-weight: 600;
+  padding: 15px; }
+  .btn:hover {
+    background-color: #79d1cd;
+    color: #533e2d;
+    border: 3px solid #533e2d;
+    transition: .2s; }

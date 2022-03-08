@@ -1,0 +1,186 @@
+// WHATSAPP
+.whatsapp {
+    width: 60px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 0 10px 15px 0;
+}
+
+// FOOTER
+.logoFooter {
+    grid-area: logoFooter;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    img {
+        width: 90px;
+        margin-left: 15%;
+    }
+}
+
+.redesFooter {
+    grid-area: redesFooter;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.bi {
+    color: $colorSecundario;
+}
+
+.redes {
+    width: 40px;
+}
+
+.navFooter {
+    grid-area: navFooter;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.ulFooter {
+    display: flex;
+    align-items: flex-end;
+    gap: 5px;
+    li {
+        list-style: none;
+    }
+    a {
+        text-decoration: none;
+        color: $colorSecundario;
+        font-size: 20px;
+        font-family: "Montserrat";
+        font-weight: 600;
+    }
+    
+}
+
+.buttonFooter {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    font-family: 'Montserrat Alternates';
+    font-size: 17px;
+    color: $colorSecundario;
+    grid-area: buttonFooter;
+    a {
+        text-decoration: none;
+        color: $colorSecundario;
+    }
+}
+
+/* QUERY PARA MOVILES */
+@media screen and (min-width: 320px) and (max-width: 599px) {
+    footer {
+        padding: 0 15px;
+        display: grid;
+        height: auto;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 150px 200px 70px;
+        grid-template-areas: "redesFooter redesFooter"
+                             "logoFooter navFooter"
+                             "buttonFooter buttonFooter";
+    }
+
+    .ulFooter {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+}
+
+/* QUERY PARA TABLETAS PEQUEÑAS */
+@media screen and (min-width: 600px) and (max-width: 767px) {
+    footer {
+        padding: 0 15px;
+        display: grid;
+        height: auto;
+        grid-template-columns: 20% 80%;
+        grid-template-rows: 150px 200px 70px;
+        grid-template-areas: "redesFooter redesFooter"
+                             "logoFooter navFooter"
+                             "buttonFooter buttonFooter";
+    }
+
+    .ulFooter {
+        gap: 20px;
+        li a {
+            font-size: 17px;
+        }
+    }
+}
+
+/* QUERY PARA TABLETAS */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    footer {
+        padding: 0 15px;
+        display: grid;
+        height: auto;
+        grid-template-columns: 20% 80%;
+        grid-template-rows: 150px 200px 70px;
+        grid-template-areas: "redesFooter redesFooter"
+                             "logoFooter navFooter"
+                             "buttonFooter buttonFooter";
+    }
+
+    .ulFooter {
+        gap: 20px;
+    }
+}
+
+/* QUERY PARA NOTEBOOKS */
+@media screen and (min-width: 1024px) and (max-width: 1999px) {
+    footer {
+        padding: 0 15px;
+        display: grid;
+        height: auto;
+        grid-template-columns: 20% 80%;
+        grid-template-rows: 150px 200px 70px;
+        grid-template-areas: "redesFooter redesFooter"
+                             "logoFooter navFooter"
+                             "buttonFooter buttonFooter";
+    }
+
+    .ulFooter {
+        gap: 30px;
+        li a:hover {
+            color: $colorTercero;
+            transition: .2s;
+        }
+    }
+
+    .bi:hover {
+        transform: scale(1.4);
+        transition: .2s; 
+    }
+}
+
+/* QUERY PARA PANTALLAS GRANDES */
+@media screen and (min-width: 1200px) {
+    footer {
+        padding: 0 15px;
+        display: grid;
+        height: auto;
+        grid-template-columns: 20% 80%;
+        grid-template-rows: 150px 200px 70px;
+        grid-template-areas: "redesFooter redesFooter"
+                             "logoFooter navFooter"
+                             "buttonFooter buttonFooter";
+    }
+
+    .ulFooter {
+        gap: 30px;
+        li a:hover {
+            color: $colorTercero;
+            transition: .2s;
+        }
+    }
+
+    .bi:hover {
+        transform: scale(1.4);
+        transition: .2s; 
+    }
+}
