@@ -4,18 +4,21 @@
     margin: 0;
 }
 
-h1, h2 {
-    font-family: 'Montserrat';
+h1, h2, h3, p {
+    font-family: 'Rubik';
 }
 
-h3, p {
-    font-family: 'Rubik';
+h2 {
+    font-weight: 400;
+}
+
+h3 {
+    font-weight: 300;
 }
 
 header {
     grid-area: header;
-    background-color: #368ca7;
-    padding: 3px;
+    background-color: #79d1cd;
     height: auto;
 }
 
@@ -25,75 +28,134 @@ body {
 
 main {
     grid-area: main;
+    height: auto;
 }
 
 footer {
     grid-area: footer;
+    background-color: #79d1cd;
+}
+
+.btn {
+    font-family: 'Montserrat';
+    border-radius: 25px;
+    background-color: rgb(255, 248, 241);
+    color: #533e2d;
+    border: 3px solid #533e2d;
+    font-weight: 600;
+    padding: 15px;
+}
+
+.btn:hover {
+    background-color: #79d1cd;
+    color: #f6f6f6;
+    transition: .2s;
 }
 
 /* ESTILOS GENERALES NAV */
-.logo {
-    width: 60px;
+nav {
+    display: flex;
 }
 
+.logo {
+    width: 70px;
+}
 
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-weight: 600;
+    font-family: 'Montserrat';
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #533e2d;
+    padding: 15px;
+}
+
+.navbar-dark .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2883, 62, 45, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar-dark .navbar-toggler {
+    border: 3px solid #533e2d;
+    margin-right: 10px;
+}
 
 /* ---------------------------------INDEX--------------------------------- */
 /* ESTILOS GENERALES HERO */
-.heroSection {
-    display: flex;
-    flex-direction: column;
-    background-image: url('../imagenes/herobackground5mob.png');
-    justify-content: center;
-}
 .heroMain {
-    margin: 20px 0 15px 0;
-    padding: 0 10px;
+    background-image: url(../imagenes/heroback4.png);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    align-content: flex-end;
-    text-align: center;
+    justify-content: center;
+    height: 90vh;
+    margin: 80px 0 0 0;
+}
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    justify-content: center;
+    margin: 10%;
 }
 
-.heroMain h1 {
+.mainTittle {
     padding-bottom: 10px 0;
-    color: rgb(255, 248, 241);
-}
-
-.heroMain h2 {
-    color: rgb(255, 248, 241);
-}
-
-.heroMain p {
-    padding: 40px 0;
-    color: rgb(255, 248, 241);
-    font-weight: 500;
-}
-
-.mainButton {
-    padding: 15px 20px;
-    background-color: #368ca7;
-    color: rgb(255, 248, 241);
-    font-family: 'Montserrat Alternates';
     font-weight: 600;
-    border-radius: 25px;
-    border: none;
-    cursor: pointer;
+    color: #f6f6f6;
+}
+
+.mainSubtittle {
+    color: #f6f6f6;
+    font-weight: 600;
+}
+
+.mainText {
+    color: #f6f6f6;
+    font-weight: 400;
+}
+
+/* GENERALES MAS VENDIDOS */
+.masVendidos {
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+.masTittle{
+    font-size: 60px;
+    margin: 20px 0;
+    font-weight: 400;
+}
+
+.masSubtittle {
+    font-size: 30px;
+    margin: 20px 0;
+    font-weight: 300;
+}
+
+.d-block {
+    border-radius: 15px;
 }
 
 /* GENERALES PRODUCT */
-
-
-#productContainer {
+.productContainer {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-content: center;
     align-items: center;
-    padding: 20px 30px;
+    padding: 30px 30px;
 }
 
-#productContainer a {
+.productContainer a {
     display: flex;
     justify-content: center;
 }
@@ -102,26 +164,31 @@ footer {
     display: flex;
     flex-direction: column;
     text-align: center;
-    margin: 70px 0 30px 0;
+    margin: 100px 0 30px 0;
 }
 
 .productTittle {
-    font-size: 40px;
+    font-size: 60px;
 }
 
 .productSubtittle {
     margin-top: 20px;
-    font-size: 25px;
+    font-size: 30px;
+}
+
+.imageContainer {
+    overflow: hidden;
+    border-radius: 13px;
 }
 
 .imageProduct {
-    border-radius: 13px;
     width: 300px;
     height: 400px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    transition: transform .5s ease;
 }
 
 .tittleProduct {
@@ -134,16 +201,12 @@ footer {
     padding: 0 30px;
 }
 
-.loQuiero {
-    background-color: #368ca7;
-    color: rgb(255, 248, 241);
-    font-size: 15px;
-    font-weight: 600;
-    padding: 15px 30px;
-    margin-top: 40px;
-    border: none;
-    border-radius: 25px;
-    cursor: pointer;
+.buttonContainer {
+    overflow:visible;
+}
+
+.buttonContainer a {
+    text-decoration: none;
 }
 
 /* GENERALES VER MAS */
@@ -152,9 +215,12 @@ footer {
     flex-direction: column;
     justify-content: center;
     background-image: url('../imagenes/pexels-nappy-936000mob.png');
-    background-size: cover;
-    height: 400px;
+    height: 800px;
     margin-top: 40px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .textMas {
@@ -167,7 +233,7 @@ footer {
 
 .textMas h2 {
     color: #f6f6f6;
-    font-size: 50px;
+    font-size: 60px;
     margin: 30px 0;
 }
 
@@ -184,7 +250,7 @@ footer {
 
 /* GENERALES WHATSAPP */
 .whatsapp {
-    width: 50px;
+    width: 60px;
     position: fixed;
     bottom: 0;
     right: 0;
@@ -211,9 +277,12 @@ footer {
     align-items: center;
 }
 
+.bi {
+    color: #533e2d;
+}
+
 .redes {
     width: 40px;
-
 }
 
 .navFooter {
@@ -235,7 +304,7 @@ footer {
 
 .ulFooter li a {
      text-decoration: none;
-     color: #f6f6f6;
+     color: #533e2d;
      font-size: 20px;
      font-family: "Montserrat";
      font-weight: 600;
@@ -248,15 +317,14 @@ footer {
     align-items: center;
     font-family: 'Montserrat Alternates';
     font-size: 17px;
-    color: #f6f6f6;
+    color: #533e2d;
     grid-area: buttonFooter;
 }
 
 .buttonFooter a {
     text-decoration: none;
-    color: #f6f6f6;
+    color: #533e2d;
 }
-
 
 /* -------------------------- GENERALES MENU ---------------------------- */
 /* GENERALES MENU */
@@ -283,42 +351,80 @@ footer {
 
 
 /* --------------------------- GENERALES CONOCENOS --------------------------- */
-/* GENERALES NOSOTROS */
-.conocenosText {
-    margin: 60px 0 20px 0;
-    grid-area: conocenosText;
-}
-
-.conocenosTittle {
-    text-align: center;
-}
-
-.conocenosRow {
-    margin: 70px 0;
-}
 
 #conocenosP {
-    padding: 0 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: justify;
+    padding: 0 30px;
+}
+
+#conocenosImage {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#conocenosP P {
-    margin: 30px 0;
-}
-
-#conocenosI {
+.conocenosGrid img {
+    width: 600px;
     border-radius: 10px;
-    margin: 30px 0;
+    margin: 50px 0;
 }
 
-.conocenosImage {
+.conocenosP1 {
+    grid-area: conocenosP1;  
+}
+
+.conocenosP2 {
+    grid-area: conocenosP2;
+}
+
+.conocenosP3 {
+    grid-area: conocenosP3;
+}
+
+.conocenosImage1 {
     grid-area: conocenosImage1;
+}
+
+.conocenosImage2 {
+    grid-area: conocenosImage2;
+}
+
+.visitanos {
+    background-image: url(../imagenes/heroback2.png);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #f6f6f6;
+}
+
+.cabeceraConocenos {
+    background-image: url(../imagenes/conocenoscabecera.png);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    height: 75vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 80px 0 30px 0;
+}
+
+.cabeceraConocenos h1 {
+    color: #f6f6f6;
+    font-size: 70px;
+    text-align: center;
 }
 
 /* ------------------------- GENERALES UBICACIONES ---------------------- */
@@ -337,17 +443,6 @@ footer {
 
 .ubicacionesSubtittle {
     text-align: center;
-}
-
-.btn {
-    font-family: 'Montserrat';
-    border-radius: 20px;
-    background-color: rgb(255, 248, 241);
-    color: #368ca7;
-    font-weight: 600;
-    border: 3px solid;
-    border-color: #368ca7;
-    padding: 15px;
 }
 
 .ubicacionesP {
@@ -426,29 +521,34 @@ footer {
                              "footer";
     }
 
-    /* NAV */
-    
-
-
-    /*HERO SECTION*/
-    .heroSection {
-        height: 77vh;
-    }
-
-    .heroMain h1 {
+    /*HERO SECTION*/    
+    .mainTittle {
         font-size: 30px;
     }
 
-    .heroMain h2 {
+    .mainSubtittle {
         font-size: 40px;
     }
 
-    .heroMain p {
+    .mainText {
         font-size: 25px;
     }
 
     .mainButton {
         font-size: 13px;
+    }
+
+    /* GENERALES MAS VENDIDOS */
+    .masVendidosContainer {
+        text-align: center;
+    }
+
+    .containerCarousel {
+        margin-top: 40px;
+    }
+    .productP {
+        font-size: 25px;
+        margin: 20px 0;
     }
 
     /* VER MAS SECTION */
@@ -464,7 +564,6 @@ footer {
     /* FOOTER */
 
     footer {
-        background-color: #368ca7;
         padding: 0 15px;
         display: grid;
         height: auto;
@@ -481,12 +580,27 @@ footer {
     }
 
     /* --------------------------CONOCENOS------------------------- */
-    .conocenosTittle {
-        font-size: 30px;
+    .conocenosGrid {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto auto auto auto;
+        grid-template-areas: "conocenosP1"
+                             "conocenosImage1"
+                             "conocenosP2"
+                             "conocenosImage2"
+                             "conocenosP3";
     }
 
-    #conocenosI {
-        width: 300px;
+     .cabeceraConocenos {
+        height: 35vh;
+    }
+
+    .cabeceraConocenos h1 {
+        font-size: 35px;
+    }
+
+    .conocenosGrid img {
+        width: 90%;
     }
 
     /* --------------------- UBICACIONES --------------------- */
@@ -522,28 +636,34 @@ footer {
                              "footer footer";
     }
 
-    /* NAV */
-  
-
     /*HERO SECTION*/
-    .heroSection {
-        height: 90vh;
-    }
-
-    .heroMain h1 {
+    .mainTittle {
         font-size: 40px;
     }
 
-    .heroMain h2 {
+    .mainSubtittle {
         font-size: 40px;
     }
 
-    .heroMain p {
+    .mainText {
         font-size: 25px;
     }
 
     .mainButton {
         font-size: 14px;
+    }
+
+    /* GENERALES MAS VENDIDOS */
+    .masVendidosContainer {
+        text-align: center;
+    }
+
+    .containerCarousel {
+        margin-top: 40px;
+    }
+    .productP {
+    font-size: 25px;
+    margin: 20px 0;
     }
 
     /* VER MAS SECTION */
@@ -558,7 +678,6 @@ footer {
     /* FOOTER */
 
     footer {
-        background-color: #368ca7;
         padding: 0 15px;
         display: grid;
         height: auto;
@@ -578,14 +697,28 @@ footer {
     }
 
      /* --------------------------CONOCENOS------------------------- */
-    .conocenosTittle {
-        font-size: 40px;
+     .conocenosGrid {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto auto auto auto;
+        grid-template-areas: "conocenosP1"
+                             "conocenosImage1"
+                             "conocenosP2"
+                             "conocenosImage2"
+                             "conocenosP3";
     }
 
-    #conocenosI {
-        width: 400px;
+     .cabeceraConocenos {
+        height: 40vh;
     }
 
+    .cabeceraConocenos h1 {
+        font-size: 50px;
+    }
+
+    .conocenosGrid img {
+        width: 500px;
+    }
     /* --------------------- UBICACIONES --------------------- */
     .ubicacionesTittle {
         font-size: 40px;
@@ -619,28 +752,38 @@ footer {
                              "footer footer";
     }
 
-    /* NAV */
-  
-
-    /*HERO SECTION*/
+    /*HERO SECTION*/    
     .heroSection {
         height: 90vh;
     }
 
-    .heroMain h1 {
+    .mainTittle {
         font-size: 45px;
     }
 
-    .heroMain h2 {
+    .mainSubtittle {
         font-size: 50px;
     }
 
-    .heroMain p {
+    .mainText {
         font-size: 30px;
     }
 
     .mainButton {
         font-size: 17px;
+    }
+
+    /* GENERALES MAS VENDIDOS */
+    .masVendidosContainer {
+        text-align: center;
+    }
+
+    .containerCarousel {
+        margin-top: 40px;
+    }
+    .productP {
+    font-size: 25px;
+    margin: 20px 0;
     }
 
     /* VER MAS SECTION */
@@ -652,7 +795,6 @@ footer {
     /* FOOTER */
 
     footer {
-        background-color: #368ca7;
         padding: 0 15px;
         display: grid;
         height: auto;
@@ -669,11 +811,24 @@ footer {
 
 
     /* --------------------------CONOCENOS------------------------- */
-    .conocenosTittle {
-        font-size: 40px;
+    .conocenosGrid {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: "conocenosP1 conocenosImage1"
+                             "conocenosP2 conocenosP2"
+                             "conocenosP3 conocenosImage2";
     }
 
-    #conocenosI {
+     .cabeceraConocenos {
+        height: 50vh;
+    }
+
+    .cabeceraConocenos h1 {
+        font-size: 50px;
+    }
+
+    .conocenosGrid img {
         width: 400px;
     }
 
@@ -710,11 +865,14 @@ footer {
                              "footer footer footer";
     }
 
-    /*HERO SECTION*/
-    .heroSection {
-        height: 95vh;
+    /* NAV */
+    .navbar-dark .navbar-nav .nav-link:hover {
+        background-color: #533e2d;
+        color: #79d1cd;
+        border-radius: 5px;
     }
 
+    /*HERO SECTION*/   
     .heroMain h1 {
         font-size: 60px;
     }
@@ -731,23 +889,14 @@ footer {
         font-size: 17px;
     }
 
-    .mainButton:hover {
-        padding: 12px 17px;
-        background-color: rgb(255, 248, 241);
-        color: #368ca7;
-        border: 3px solid;
-        border-color: #368ca7;
-        transition: .2s;
-        transform: scale(1.2, 1.2);
+    
+    /* PRODUCT SECTION */
+    .imageProduct:hover {
+        transform: scale(1.3);
     }
 
-    /* PRODUCT SECTION */
     .loQuiero:hover {
-        background-color: rgb(255, 248, 241);
-        color: #368ca7;
-        border: 2px solid;
-        border-color: #368ca7;
-        transition: all .2s;
+        transform: scale(1.2);
     }
 
     /* VER MAS SECTION */
@@ -767,7 +916,6 @@ footer {
     /* FOOTER */
 
     footer {
-        background-color: #368ca7;
         padding: 0 15px;
         display: grid;
         height: auto;
@@ -778,33 +926,39 @@ footer {
                              "buttonFooter buttonFooter";
     }
 
-    .navFooter {
-        margin-right: 10%;
-    }
-
     .ulFooter {
         gap: 30px;
     }
 
-  
-     /* --------------------------CONOCENOS------------------------- */
-    .conocenosTittle {
-        font-size: 40px;
-    }
-
-    #conocenosI {
-        width: 500px;
-    }
-
-     /* --------------------- UBICACIONES --------------------- */
-    .btn:hover {
-
-        background-color: #368ca7;
-        color: rgb(255, 248, 241);
-        border-color: #368ca7;
+    .ulFooter li a:hover {
+        color: #f6f6f6;
         transition: .2s;
     }
 
+    .bi:hover {
+        transform: scale(1.4);
+        transition: .2s; 
+    }
+
+     /* --------------------------CONOCENOS------------------------- */
+     .conocenosGrid {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas: "conocenosP1 conocenosImage1"
+                             "conocenosP2 conocenosP2"
+                             "conocenosP3 conocenosImage2";
+    }
+
+     .cabeceraConocenos {
+        height: 60vh;
+    }
+
+    .cabeceraConocenos h1 {
+        font-size: 50px;
+    }
+
+     /* --------------------- UBICACIONES --------------------- */
     .ubicacionesTittle {
         font-size: 40px;
         margin: 20px 0;
@@ -838,12 +992,13 @@ footer {
     }
 
     /* NAV */
-
-    /*HERO SECTION*/
-    .heroSection {
-        height: 95vh;
+   .navbar-dark .navbar-nav .nav-link:hover {
+        background-color: #533e2d;
+        color: #79d1cd;
+        border-radius: 5px;
     }
 
+    /*HERO SECTION*/
     .heroMain h1 {
         font-size: 60px;
     }
@@ -860,27 +1015,17 @@ footer {
         font-size: 17px;
     }
 
-    .mainButton:hover {
-        padding: 12px 17px;
-        background-color: rgb(255, 248, 241);
-        color: #368ca7;
-        border: 3px solid;
-        border-color: #368ca7;
-        transition: .2s;
-        transform: scale(1.2, 1.2);
-    }
-
-    
+       
 
     /* PRODUCT SECTION */
-    .loQuiero:hover {
-        background-color: rgb(255, 248, 241);
-        color: #368ca7;
-        border: 2px solid;
-        border-color: #368ca7;
-        transition: all .2s;
+    .imageProduct:hover {
+        transform: scale(1.3);
     }
 
+    .loQuiero:hover {
+        transform: scale(1.2);
+    }
+    
     /* VER MAS SECTION */
     .buttonMas {
         font-size: 17px;
@@ -898,7 +1043,6 @@ footer {
     /* FOOTER */
 
     footer {
-        background-color: #368ca7;
         padding: 0 15px;
         display: grid;
         height: auto;
@@ -909,21 +1053,37 @@ footer {
                              "buttonFooter buttonFooter";
     }
 
-    .navFooter {
-        margin-right: 10%;
-    }
-
     .ulFooter {
         gap: 30px;
     }
 
-    /* --------------------------CONOCENOS------------------------- */
-    .conocenosTittle {
-        font-size: 40px;
+    .bi:hover {
+        transform: scale(1.4);
+        transition: .2s; 
     }
 
-    #conocenosI {
-        width: 500px;
+    .ulFooter li a:hover {
+        color: #f6f6f6;
+        transition: .2s;
+    }
+
+    /* --------------------------CONOCENOS------------------------- */
+    .conocenosGrid {
+        height: auto;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas: "conocenosP1 conocenosImage1"
+                             "conocenosP2 conocenosP2"
+                             "conocenosP3 conocenosImage2";
+    }
+
+    .cabeceraConocenos {
+        height: 60vh;
+    }
+
+    .cabeceraConocenos h1 {
+        font-size: 60px;
     }
 
     /* --------------------- UBICACIONES --------------------- */
