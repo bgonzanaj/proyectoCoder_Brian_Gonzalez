@@ -1,13 +1,8 @@
+
 // ESTILOS GENERALES HERO
 .heroMain {
+    @extend .cajas-imagen-fondo;
     background-image: $backgroundHero;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: bottom;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     height: 90vh;
     margin: 80px 0 0 0;
 }
@@ -25,11 +20,6 @@
     color: $colorTercero;
 }
 
-.mainSubtittle {
-    color: $colorTercero;
-    font-weight: 600;
-}
-
 .mainText {
     color: $colorTercero;
     font-weight: 400;
@@ -39,18 +29,6 @@
 .masVendidos {
     margin-top: 100px;
     margin-bottom: 50px;
-}
-
-.masTittle{
-    font-size: 60px;
-    margin: 20px 0;
-    font-weight: 400;
-}
-
-.masSubtittle {
-    font-size: 30px;
-    margin: 20px 0;
-    font-weight: 300;
 }
 
 .d-block {
@@ -78,28 +56,13 @@
     margin: 100px 0 30px 0;
 }
 
-.productTittle {
-    font-size: 60px;
-}
-
-.productSubtittle {
-    margin-top: 20px;
-    font-size: 30px;
-}
-
 .imageContainer {
     overflow: hidden;
     border-radius: 13px;
 }
 
 .imageProduct {
-    width: 300px;
-    height: 400px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transition: transform .5s ease;
+    @include imagen-productos; 
 }
 
 .tittleProduct {
@@ -110,6 +73,8 @@
 .textProduct {
     text-align: justify;
     padding: 0 30px;
+    font-size: 18px;
+    margin: 15px 0;
 }
 
 .buttonContainer {
@@ -119,33 +84,25 @@
     }
 }
 
+.loQuiero {
+    margin: 20px 0;
+}
+
 // GENERALES VER MAS
 .verMas {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    @extend .cajas-imagen-fondo;
     background-image: $backgroundVerMas;
     height: 800px;
     margin-top: 40px;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 .textMas {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    @extend .cajas-texto-fondo;
     h2 {
         color: $colorTercero;
-        font-size: 60px;
         margin: 30px 0;
     }
 }
-
 
 // QUERY PARA MOVILES
 @media screen and (min-width: 320px) and (max-width: 599px) {
@@ -160,21 +117,25 @@
                              "footer";
     }
 
-    /*HERO SECTION*/    
+    /*HERO SECTION*/
+    .mainContainer {
+        @include flex-column-center;
+    }   
+
     .mainTittle {
-        font-size: 30px;
+        @include titulos-sizes (32px, 20px 0);
     }
 
     .mainSubtittle {
-        font-size: 40px;
+        @include titulos-sizes (43px, 10px 0);
     }
 
     .mainText {
-        font-size: 25px;
+        @include titulos-sizes (25px, 10px 0);
     }
 
     .mainButton {
-        font-size: 13px;
+        @include titulos-sizes (15px, 10px 0);
     }
 
     /* GENERALES MAS VENDIDOS */
@@ -188,6 +149,20 @@
     .productP {
         font-size: 25px;
         margin: 20px 0;
+    }
+
+    // PRODUCTOS
+    .masTittle, .productTittle {
+        @include titulos-sizes (40px, 10px 0);
+    }
+
+    .masSubtittle, .productSubtittle {
+        @include titulos-sizes (27px, 30px 0);
+    }
+
+    // VER MAS 
+    .tittleMas {
+        @include titulos-sizes (60px, 20px 0);
     }
 }
 
@@ -204,20 +179,24 @@
     }
 
     /*HERO SECTION*/
+    .mainContainer {
+        @include flex-column-center;
+    }   
+
     .mainTittle {
-        font-size: 40px;
+        @include titulos-sizes (45px, 20px 0);
     }
 
     .mainSubtittle {
-        font-size: 40px;
+        @include titulos-sizes (55px, 10px 0);
     }
 
     .mainText {
-        font-size: 25px;
+        @include titulos-sizes (35px, 10px 0);
     }
 
     .mainButton {
-        font-size: 14px;
+        @include titulos-sizes (25px, 10px 0);
     }
 
     /* GENERALES MAS VENDIDOS */
@@ -231,6 +210,20 @@
     .productP {
     font-size: 25px;
     margin: 20px 0;
+    }
+
+    // PRODUCTOS
+    .masTittle, .productTittle {
+        @include titulos-sizes (50px, 10px 0);
+    }
+
+    .masSubtittle, .productSubtittle {
+        @include titulos-sizes (37px, 30px 0);
+    }
+
+    // VER MAS 
+    .tittleMas {
+        @include titulos-sizes (60px, 20px 0);
     }
 }
 
@@ -246,25 +239,25 @@
                              "footer footer";
     }
 
-    /*HERO SECTION*/    
-    .heroSection {
-        height: 90vh;
-    }
+    /*HERO SECTION*/
+    .mainContainer {
+        @include flex-column-center;
+    }   
 
     .mainTittle {
-        font-size: 45px;
+        @include titulos-sizes (55px, 20px 0);
     }
 
     .mainSubtittle {
-        font-size: 50px;
+        @include titulos-sizes (65px, 10px 0);
     }
 
     .mainText {
-        font-size: 30px;
+        @include titulos-sizes (45px, 10px 0);
     }
 
     .mainButton {
-        font-size: 17px;
+        @include titulos-sizes (25px, 10px 0);
     }
 
     /* GENERALES MAS VENDIDOS */
@@ -278,6 +271,20 @@
     .productP {
     font-size: 25px;
     margin: 20px 0;
+    }
+
+    // PRODUCTOS
+    .masTittle, .productTittle {
+        @include titulos-sizes (60px, 10px 0);
+    }
+
+    .masSubtittle, .productSubtittle {
+        @include titulos-sizes (47px, 30px 0);
+    }
+
+    // VER MAS 
+    .tittleMas {
+        @include titulos-sizes (60px, 20px 0);
     }
 }
 
@@ -293,24 +300,28 @@
                             "footer footer footer";
    }
 
-   /*HERO SECTION*/   
-   .heroMain {
-       h1 {
-        font-size: 60px;
-       } 
-       h2 {
-        font-size: 70px;
-       }
-       p {
-        font-size: 25px;
-       }
-   }
+   /*HERO SECTION*/
+    .mainTittle {
+        @include titulos-sizes (60px, 20px 0);
+    }
 
-   .mainButton {
-       font-size: 17px;
-   }
+    .mainSubtittle {
+        @include titulos-sizes (70px, 10px 0);
+    }
 
+    .mainText {
+        @include titulos-sizes (30px, 10px 0);
+    }
+
+    .mainButton {
+        @include titulos-sizes (28px, 10px 0);
+    }
    
+
+    .mainButton {
+        @include titulos-sizes (25px, 10px 0);
+    }
+    
    /* PRODUCT SECTION */
    .imageProduct:hover {
        transform: scale(1.3);
@@ -319,6 +330,22 @@
    .loQuiero:hover {
        transform: scale(1.2);
    }
+   .masTittle, .productTittle {
+        @include titulos-sizes (60px, 10px 0);
+    }
+
+    .masSubtittle, .productSubtittle {
+        @include titulos-sizes (47px, 30px 0);
+    }
+
+    .textProduct {
+        @include titulos-sizes (18px, 10px 0);
+    }
+
+    // VER MAS 
+    .tittleMas {
+        @include titulos-sizes (60px, 20px 0);
+    }
 }
 
 /* QUERY PARA PANTALLAS GRANDES */
@@ -333,30 +360,50 @@
                              "footer footer footer";
     }
 
-    /*HERO SECTION*/
-    .heroMain {
-        h1 {
-            font-size: 60px;
-        }
-        h2 {
-            font-size: 70px;
-        }
-        p {
-            font-size: 25px;
-        }
+     /*HERO SECTION*/
+     .mainTittle {
+        @include titulos-sizes (60px, 20px 0);
+    }
+
+    .mainSubtittle {
+        @include titulos-sizes (70px, 10px 0);
+    }
+
+    .mainText {
+        @include titulos-sizes (30px, 10px 0);
     }
 
     .mainButton {
-        font-size: 17px;
+        @include titulos-sizes (28px, 10px 0);
+    }
+   
+    .mainButton {
+        @include titulos-sizes (25px, 10px 0);
     }      
 
     /* PRODUCT SECTION */
-    .imageProduct:hover {
-        transform: scale(1.3);
+   .imageProduct:hover {
+    transform: scale(1.3);
     }
 
     .loQuiero:hover {
         transform: scale(1.2);
     }
+
+    .masTittle, .productTittle {
+        @include titulos-sizes (60px, 10px 0);
+    }
+
+    .masSubtittle, .productSubtittle {
+        @include titulos-sizes (47px, 30px 0);
+    }
+
+    .textProduct {
+        @include titulos-sizes (18px, 10px 0);
+    }
+
+    // VER MAS 
+    .tittleMas {
+        @include titulos-sizes (60px, 20px 0);
+    }
 }
-   

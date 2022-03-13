@@ -7,7 +7,7 @@ $h3Weigth: 300;
 
 // VARIABLES COLORES
 $colorPrincipal: #79d1cd;
-$colorSecundario: #533e2d; 
+$colorSecundario: #533e2d;
 $colorTercero: #f6f6f6;
 $colorCuarto: rgb(255, 248, 241);
 
@@ -19,3 +19,89 @@ $backgroundHero: url(../imagenes/heroback4.png);
 
 // VARIABLES VER MAS
 $backgroundVerMas: url('../imagenes/pexels-nappy-936000mob.png');
+
+// TITULOS PRINCIPALES
+.tittles {
+    margin: 20px 0;
+    font-weight: 400;
+}
+.subtittles {
+    margin: 20px 0;
+    font-weight: 300;
+}
+
+// CONTENEDORES DE TEXTO
+.cajas-texto-fondo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+// CONTENEDORES DE IMAGEN DE FONDO PARA TITULOS
+.cajas-imagen-fondo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+//VARIABLES CONOCENOS
+$backgroundConocenos: url("../imagenes/conocenoscabecera.png");
+$backgroundVisitanos: url("../imagenes/heroback2.png") ;
+
+// MIXIN SIZES
+@mixin titulos-sizes ($font-size, $margin) {
+    font-size: $font-size;
+    margin: $margin;
+}
+
+// MIXIN CONTENEDORES
+@mixin flex-column-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+@mixin imagen-productos {
+    width: 300px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform .5s ease;
+}
+
+// PARRAFOS
+@mixin parrafos-conocenos {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: justify;
+}
+
+@mixin letra-parrafos ($size, $padding) {
+    font-size: $size;
+    padding: $padding;
+}
+
+// IMAGENES CONOCENOS
+@mixin imagen-conocenos-contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin imagen-conocenos-ancho ($width, $border, $margin) {
+    width: $width;
+    border-radius: $border;
+    margin: $margin;
+}
