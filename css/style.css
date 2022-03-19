@@ -1,4 +1,18 @@
 @charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0; }
+
+/* --------------------VARIABLES GENERALES------------------- */
+h1, h2, h3, p {
+  font-family: "Rubik"; }
+
+h2 {
+  font-weight: 400; }
+
+h3 {
+  font-weight: 300; }
+
 .tittles {
   margin: 20px 0;
   font-weight: 400; }
@@ -7,28 +21,49 @@
   margin: 20px 0;
   font-weight: 300; }
 
-.cajas-texto-fondo, .textMas, .menuTitulo, .visitanosContainer .visitanos {
+.cajas-texto-fondo, .textMas, .visitanosContainer .visitanos {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center; }
 
-.cajas-imagen-fondo, .heroMain, .verMas, .menuCabecera, .visitanosContainer, .cabeceraConocenos {
+.cajas-imagen-fondo, .heroMain, .verMas, .menuCabecera, .cabeceraConocenos, .visitanosContainer, .ubicacionesCabecera, .contactoCabecera {
   display: flex;
   flex-direction: column;
   justify-content: center;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover; }
+  background-size: cover;
+  position: relative; }
 
+.fondo-oscuro, .heroMain:before, .verMas:before, .menuCabecera:before, .cabeceraConocenos:before, .visitanosContainer:before, .ubicacionesCabecera:before, .contactoCabecera:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.6); }
+
+.titulo-fondo-oscuro, .textMas h2, .menuCabecera h1, .cabeceraConocenos h1, .visitanosContainer .visitanos h1, .ubicacionesCabecera h1, .contactoCabecera h1 {
+  color: #f6f6f6;
+  position: relative;
+  text-align: center; }
+
+/* -----------------------MIXIN GENERALES--------------------- */
+/* -----------------VARIABLES CONOCENOS-------------------------- */
+/* ---------------------------VARIABLES UBICACIONES-------------------------- */
 .heroMain {
-  background-image: url(../imagenes/heroback4.png);
+  background-image: url(../imagenes/hero0.svg);
+  background-position: top;
   height: 90vh;
   margin: 80px 0 0 0; }
 
 .mainContainer {
+  position: relative;
+  color: #f6f6f6;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -100,16 +135,14 @@
   margin: 20px 0; }
 
 .verMas {
-  background-image: url("../imagenes/pexels-nappy-936000mob.png");
-  height: 800px;
+  background-image: url("../imagenes/ver-mas-background.jpg");
+  height: 600px;
   margin-top: 40px; }
 
-.textMas h2 {
-  color: #f6f6f6;
-  margin: 30px 0; }
+.textMas button {
+  position: relative; }
 
 @media screen and (min-width: 320px) and (max-width: 599px) {
-  /* --------------------------INDEX------------------------ */
   /* ESTILOS GENERALES */
   .bodyIndex {
     display: grid;
@@ -124,7 +157,7 @@
     align-items: center;
     text-align: center; }
   .mainTittle {
-    font-size: 32px;
+    font-size: 42px;
     margin: 20px 0; }
   .mainSubtittle {
     font-size: 43px;
@@ -133,7 +166,7 @@
     font-size: 25px;
     margin: 10px 0; }
   .mainButton {
-    font-size: 15px;
+    font-size: 16px;
     margin: 10px 0; }
   /* GENERALES MAS VENDIDOS */
   .masVendidosContainer {
@@ -175,10 +208,10 @@
     font-size: 55px;
     margin: 10px 0; }
   .mainText {
-    font-size: 35px;
+    font-size: 25px;
     margin: 10px 0; }
   .mainButton {
-    font-size: 25px;
+    font-size: 18px;
     margin: 10px 0; }
   /* GENERALES MAS VENDIDOS */
   .masVendidosContainer {
@@ -220,10 +253,10 @@
     font-size: 65px;
     margin: 10px 0; }
   .mainText {
-    font-size: 45px;
+    font-size: 30px;
     margin: 10px 0; }
   .mainButton {
-    font-size: 25px;
+    font-size: 18px;
     margin: 10px 0; }
   /* GENERALES MAS VENDIDOS */
   .masVendidosContainer {
@@ -265,7 +298,7 @@
     font-size: 28px;
     margin: 10px 0; }
   .mainButton {
-    font-size: 25px;
+    font-size: 18px;
     margin: 10px 0; }
   /* PRODUCT SECTION */
   .imageProduct:hover {
@@ -307,7 +340,7 @@
     font-size: 28px;
     margin: 10px 0; }
   .mainButton {
-    font-size: 25px;
+    font-size: 18px;
     margin: 10px 0; }
   /* PRODUCT SECTION */
   .imageProduct:hover {
@@ -363,13 +396,6 @@ nav a {
     background-color: #533e2d;
     color: #79d1cd;
     border-radius: 5px; } }
-
-.whatsapp {
-  width: 60px;
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  padding: 0 10px 15px 0; }
 
 .logoFooter {
   grid-area: logoFooter;
@@ -500,9 +526,7 @@ nav a {
     transition: .2s; } }
 
 .menuCabecera {
-  background-image: url(../imagenes/heroback2.png);
-  height: 400px;
-  color: #f6f6f6;
+  background-image: url(../imagenes/menu-head.jpg);
   margin-top: 80px; }
 
 .productContainer {
@@ -544,30 +568,40 @@ nav a {
 
 /* QUERY PARA MOVILES */
 @media screen and (min-width: 320px) and (max-width: 599px) {
+  .menuCabecera {
+    height: 200px; }
   .menuTitulo {
     font-size: 38px;
     margin: 20px 0; } }
 
 /* QUERY PARA TABLETAS PEQUEÑAS */
 @media screen and (min-width: 600px) and (max-width: 767px) {
+  .menuCabecera {
+    height: 200px; }
   .menuTitulo {
     font-size: 45px;
     margin: 20px 0; } }
 
 /* QUERY PARA TABLETAS */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
+  .menuCabecera {
+    height: 300px; }
   .menuTitulo {
     font-size: 50px;
     margin: 20px 0; } }
 
 /* QUERY PARA NOTEBOOKS */
 @media screen and (min-width: 1024px) and (max-width: 1999px) {
+  .menuCabecera {
+    height: 400px; }
   .menuTitulo {
     font-size: 60px;
     margin: 20px 0; } }
 
 /* QUERY PARA PANTALLAS GRANDES */
 @media screen and (min-width: 1200px) {
+  .menuCabecera {
+    height: 400px; }
   .menuTitulo {
     font-size: 60px;
     margin: 20px 0; } }
@@ -576,61 +610,98 @@ nav a {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: center;
   text-align: justify;
-  grid-area: conocenosP; }
+  margin: 0 15px; }
+
+.parrafo1 {
+  grid-area: parrafo1; }
+
+.parrafo2 {
+  grid-area: parrafo2; }
+
+.parrafo3 {
+  grid-area: parrafo3; }
 
 .conocenosImage1 {
   grid-area: conocenosImage1;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center; }
 
 .conocenosImage2 {
   grid-area: conocenosImage2;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center; }
 
-.visitanosContainer {
-  background-image: url("../imagenes/heroback2.png");
-  height: 500px;
-  margin-top: 80px;
-  color: #f6f6f6; }
-  .visitanosContainer .visitanos h1 {
-    margin: 30px; }
+.conocenosImage3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  grid-area: conocenosImage3; }
+
+.conocenosImage4 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  grid-area: conocenosImage4; }
 
 .cabeceraConocenos {
-  background-image: url("../imagenes/conocenoscabecera.png");
+  background-image: url("../imagenes/conocenos-head.jpg");
   height: 400px;
   margin: 80px 0 30px 0; }
-  .cabeceraConocenos h1 {
-    color: #f6f6f6;
-    text-align: center; }
+
+.visitanosContainer {
+  background-image: url("../imagenes/visitanos.jpg");
+  height: 600px;
+  margin-top: 80px; }
+  .visitanosContainer .visitanos h1 {
+    margin: 30px; }
+  .visitanosContainer .visitanos button {
+    position: relative; }
 
 /* QUERY PARA MOVILES */
 @media screen and (min-width: 320px) and (max-width: 599px) {
   .conocenosGrid {
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: auto auto auto auto auto;
-    grid-template-areas: "conocenosImage1" "conocenosP"  "conocenosP" "conocenosImage2"; }
+    grid-template-rows: auto auto auto auto auto auto auto;
+    grid-template-areas: "parrafo1" "conocenosImage1"  "parrafo2" "conocenosImage2" "parrafo3" "conocenosImage3" "conocenosImage4"; }
   .cabeceraConocenos {
-    height: 35vh; }
+    height: 200px; }
     .cabeceraConocenos h1 {
-      font-size: 35px;
-      margin: 10px; }
+      font-size: 38px;
+      margin: 20px 0; }
   .conocenosImg {
     width: 300px;
     border-radius: 10px;
-    margin: 0px; }
+    margin: 10px 0; }
+  .conocenosDuenos {
+    width: 98%;
+    border-radius: 10px;
+    margin: 50px 0; }
+  .conocenosTitulo {
+    font-family: 'Montserrat';
+    font-weight: 600;
+    color: #533e2d;
+    text-align: left;
+    margin: 35px 0;
+    font-size: 30px; }
   .conocenosP {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: center;
     text-align: justify;
+    margin: 0 15px;
     padding: 20px 20px; }
+    .conocenosP p {
+      font-size: 18px; }
+  .conocenosImage4 {
+    margin-top: 40px; }
   .visitanos h1 {
     font-size: 35px;
     margin: 30px; } }
@@ -640,24 +711,39 @@ nav a {
   .conocenosGrid {
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: auto auto auto auto auto;
-    grid-template-areas: "conocenosImage1" "conocenosP"  "conocenosP" "conocenosImage2"; }
+    grid-template-rows: auto auto auto auto auto auto auto;
+    grid-template-areas: "parrafo1" "conocenosImage1"  "parrafo2" "conocenosImage2" "parrafo3" "conocenosImage3" "conocenosImage4"; }
   .cabeceraConocenos {
-    height: 35vh; }
+    height: 200px; }
     .cabeceraConocenos h1 {
       font-size: 45px;
-      margin: 10px; }
+      margin: 20px 0; }
   .conocenosImg {
-    width: 400px;
+    width: 70%;
     border-radius: 10px;
-    margin: 0px; }
+    margin: 15px 0; }
+  .conocenosDuenos {
+    width: 98%;
+    border-radius: 10px;
+    margin: 50px 0; }
+  .conocenosTitulo {
+    font-family: 'Montserrat';
+    font-weight: 600;
+    color: #533e2d;
+    text-align: left;
+    margin: 35px 0;
+    font-size: 35px; }
   .conocenosP {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: center;
     text-align: justify;
+    margin: 0 15px;
     padding: 40px 40px; }
+    .conocenosP p {
+      font-size: 20px; }
+  .conocenosImage4 {
+    margin-top: 40px; }
   .visitanos h1 {
     font-size: 45px;
     margin: 30px; } }
@@ -667,24 +753,39 @@ nav a {
   .conocenosGrid {
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: auto auto auto auto auto;
-    grid-template-areas: "conocenosImage1" "conocenosP"  "conocenosP" "conocenosImage2"; }
+    grid-template-rows: auto auto auto auto auto auto auto;
+    grid-template-areas: "parrafo1" "conocenosImage1"  "parrafo2" "conocenosImage2" "parrafo3" "conocenosImage3" "conocenosImage4"; }
   .cabeceraConocenos {
-    height: 35vh; }
+    height: 300px; }
     .cabeceraConocenos h1 {
-      font-size: 45px;
-      margin: 10px; }
+      font-size: 50px;
+      margin: 20px 0; }
   .conocenosImg {
-    width: 480px;
+    width: 75%;
     border-radius: 10px;
-    margin: 0px; }
+    margin: 15px 0; }
+  .conocenosDuenos {
+    width: 95%;
+    border-radius: 10px;
+    margin: 50px 0; }
+  .conocenosTitulo {
+    font-family: 'Montserrat';
+    font-weight: 600;
+    color: #533e2d;
+    text-align: left;
+    margin: 35px 0;
+    font-size: 38px; }
   .conocenosP {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: center;
     text-align: justify;
-    padding: 50px 50px; }
+    margin: 0 15px;
+    padding: 40px 40px; }
+    .conocenosP p {
+      font-size: 20px; }
+  .conocenosImage4 {
+    margin-top: 40px; }
   .visitanos h1 {
     font-size: 45px;
     margin: 30px; } }
@@ -695,24 +796,39 @@ nav a {
     height: auto;
     display: grid;
     grid-template-columns: 60% 40%;
-    grid-template-rows: auto auto;
-    grid-template-areas: "conocenosP conocenosImage1" "conocenosP conocenosImage2"; }
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: "parrafo1 conocenosImage1" "parrafo2 conocenosImage2" "parrafo3 conocenosImage3" "conocenosImage4 conocenosImage4"; }
   .cabeceraConocenos {
-    height: 45vh; }
+    height: 400px; }
     .cabeceraConocenos h1 {
-      font-size: 55px;
-      margin: 10px; }
+      font-size: 60px;
+      margin: 20px 0; }
   .conocenosImg {
-    width: 480px;
+    width: 90%;
     border-radius: 10px;
-    margin: 40px 0; }
+    margin: 15px 0; }
+  .conocenosDuenos {
+    width: 75%;
+    border-radius: 10px;
+    margin: 50px 0; }
+  .conocenosTitulo {
+    font-family: 'Montserrat';
+    font-weight: 600;
+    color: #533e2d;
+    text-align: left;
+    margin: 35px 0;
+    font-size: 40px; }
   .conocenosP {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: center;
     text-align: justify;
-    padding: 50px 50px; }
+    margin: 0 15px;
+    padding: 40px 40px; }
+    .conocenosP p {
+      font-size: 19px; }
+  .conocenosImage4 {
+    margin-top: 60px; }
   .visitanos h1 {
     font-size: 55px;
     margin: 30px; } }
@@ -723,40 +839,765 @@ nav a {
     height: auto;
     display: grid;
     grid-template-columns: 60% 40%;
-    grid-template-rows: auto auto;
-    grid-template-areas: "conocenosP conocenosImage1" "conocenosP conocenosImage2"; }
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: "parrafo1 conocenosImage1" "parrafo2 conocenosImage2" "parrafo3 conocenosImage3" "conocenosImage4 conocenosImage4"; }
   .cabeceraConocenos {
     height: 400px; }
     .cabeceraConocenos h1 {
       font-size: 60px;
-      margin: 10px; }
+      margin: 20px 0; }
   .conocenosImg {
-    width: 480px;
+    width: 90%;
     border-radius: 10px;
-    margin: 40px 0; }
+    margin: 15px 0; }
+  .conocenosDuenos {
+    width: 65%;
+    border-radius: 10px;
+    margin: 50px 0; }
+  .conocenosTitulo {
+    font-family: 'Montserrat';
+    font-weight: 600;
+    color: #533e2d;
+    text-align: left;
+    margin: 35px 0;
+    font-size: 40px; }
   .conocenosP {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: center;
     text-align: justify;
-    padding: 50px 50px; }
+    margin: 0 15px;
+    padding: 40px 40px; }
+    .conocenosP p {
+      font-size: 19px; }
+  .conocenosImage4 {
+    margin-top: 60px; }
   .visitanos h1 {
     font-size: 60px;
     margin: 30px; } }
 
-* {
-  padding: 0;
-  margin: 0; }
+/* --------UBICACIONES GENERALES--------- */
+.ubicacionesCabecera {
+  background-image: url(../imagenes/ubicaciones-head.jpg);
+  margin-top: 80px; }
 
-h1, h2, h3, p {
-  font-family: "Rubik"; }
+.botonWhatsapp {
+  background-color: #533e2d;
+  color: #fff8f1;
+  border-radius: 20px;
+  font-weight: 600;
+  padding: 13px;
+  border: 3px solid #fff8f1; }
+  .botonWhatsapp:hover {
+    background-color: #79e079;
+    color: #533e2d;
+    transition: .2s; }
 
-h2 {
-  font-weight: 400; }
+.sucursalNorte, .sucursalCentro, .sucursalSur {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  color: #fff8f1;
+  background-size: cover; }
 
-h3 {
-  font-weight: 300; }
+.sucursalTituloC {
+  margin-left: 5%; }
+
+.ubicacionesImagen1, .ubicacionesImagen2, .ubicacionesImagen3 {
+  background-size: cover; }
+
+.tabla1, .tabla2, .tabla3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #79d1cd;
+  margin: 20px;
+  height: 500px;
+  border-radius: 10px; }
+  .tabla1 table, .tabla2 table, .tabla3 table {
+    color: #533e2d; }
+
+.ubicacionesMapa1, .ubicacionesMapa2, .ubicacionesMapa3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  height: 500px;
+  border: 4px solid #533e2d;
+  border-radius: 10px; }
+  .ubicacionesMapa1 iframe, .ubicacionesMapa2 iframe, .ubicacionesMapa3 iframe {
+    border-radius: 10px; }
+
+.ubicacionesContainer {
+  margin-bottom: 100px; }
+
+.sucursalNorte {
+  grid-area: sucursalNorte; }
+
+.sucursalCentro {
+  grid-area: sucursalCentro; }
+
+.sucursalSur {
+  grid-area: sucursalSur; }
+
+.ubicacionesImagen1 {
+  grid-area: ubicacionesImagen1; }
+
+.ubicacionesImagen2 {
+  grid-area: ubicacionesImagen2; }
+
+.ubicacionesImagen3 {
+  grid-area: ubicacionesImagen3; }
+
+.tabla1 {
+  grid-area: tabla1; }
+
+.tabla2 {
+  grid-area: tabla2; }
+
+.tabla3 {
+  grid-area: tabla3; }
+
+.ubicacionesMapa1 {
+  grid-area: ubicacionesMapa1; }
+
+.ubicacionesMapa2 {
+  grid-area: ubicacionesMapa2; }
+
+.ubicacionesMapa3 {
+  grid-area: ubicacionesMapa3; }
+
+/* QUERY PARA MOVILES */
+@media screen and (min-width: 320px) and (max-width: 599px) {
+  .ubicacionesCabecera {
+    height: 200px; }
+  .ubicacionesTitulo {
+    font-size: 38px;
+    margin: 20px 0; }
+  .ubicacionesGrid1 {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 400px auto auto;
+    grid-template-areas: "sucursalNorte" "tabla1" "ubicacionesMapa1";
+    margin-top: 1px;
+    margin-bottom: 100px; }
+  .sucursalNorte {
+    position: relative;
+    background-image: url(../imagenes/ubicaciones-img-1.jpg); }
+    .sucursalNorte:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 480px;
+      background-color: #161616c7;
+      height: 400px; }
+  .sucursalTituloC {
+    position: relative; }
+    .sucursalTituloC h2 {
+      font-size: 45px; }
+    .sucursalTituloC p {
+      font-size: 18px; }
+  .tabla1 h2 {
+    margin: 10px 0;
+    color: #533e2d;
+    font-weight: 600; }
+  .tabla1 table {
+    width: 90%; }
+  .tabla1 th {
+    font-size: 20px;
+    margin: 20px 0; }
+  .tabla1 td {
+    font-size: 17px;
+    margin: 30px 0; }
+  .ubicacionesGrid2 {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 400px auto auto;
+    grid-template-areas: "sucursalCentro" "tabla2" "ubicacionesMapa2";
+    margin-top: 45px;
+    margin-bottom: 100px; }
+  .sucursalCentro {
+    position: relative;
+    background-image: url(../imagenes/ubicaciones-img-2.jpg); }
+    .sucursalCentro:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 480px;
+      background-color: #161616c7;
+      height: 400px; }
+  .sucursalTituloC {
+    position: relative; }
+    .sucursalTituloC h2 {
+      font-size: 45px; }
+    .sucursalTituloC p {
+      font-size: 18px; }
+  .tabla2 h2 {
+    margin: 10px 0;
+    color: #533e2d;
+    font-weight: 600; }
+  .tabla2 table {
+    width: 90%; }
+  .tabla2 th {
+    font-size: 23px;
+    margin: 20px 0; }
+  .tabla2 td {
+    font-size: 20px;
+    margin: 30px 0; }
+  .ubicacionesGrid3 {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 400px auto auto;
+    grid-template-areas: "sucursalSur" "tabla3" "ubicacionesMapa3";
+    margin-top: 45px;
+    margin-bottom: 100px; }
+  .sucursalSur {
+    position: relative;
+    background-image: url(../imagenes/ubicaciones-img-3.jpg); }
+    .sucursalSur:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 480px;
+      background-color: #161616c7;
+      height: 400px; }
+  .sucursalTituloC {
+    position: relative; }
+    .sucursalTituloC h2 {
+      font-size: 45px; }
+    .sucursalTituloC p {
+      font-size: 18px; }
+  .tabla3 h2 {
+    margin: 10px 0;
+    color: #533e2d;
+    font-weight: 600; }
+  .tabla3 table {
+    width: 90%; }
+  .tabla3 th {
+    font-size: 23px;
+    margin: 20px 0; }
+  .tabla3 td {
+    font-size: 20px;
+    margin: 30px 0; } }
+
+/* QUERY PARA TABLETAS PEQUEÑAS */
+@media screen and (min-width: 600px) and (max-width: 767px) {
+  .ubicacionesCabecera {
+    height: 200px; }
+  .ubicacionesTitulo {
+    font-size: 45px;
+    margin: 20px 0; }
+  .ubicacionesGrid1 {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 400px auto auto;
+    grid-template-areas: "sucursalNorte" "tabla1" "ubicacionesMapa1";
+    margin-top: 1px;
+    margin-bottom: 100px; }
+  .sucursalNorte {
+    position: relative;
+    background-image: url(../imagenes/ubicaciones-img-1.jpg); }
+    .sucursalNorte:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 480px;
+      background-color: #161616c7;
+      height: 400px; }
+  .sucursalTituloC {
+    position: relative; }
+    .sucursalTituloC h2 {
+      font-size: 45px; }
+    .sucursalTituloC p {
+      font-size: 18px; }
+  .tabla1 h2 {
+    margin: 10px 0;
+    color: #533e2d;
+    font-weight: 600; }
+  .tabla1 table {
+    width: 90%; }
+  .tabla1 th {
+    font-size: 23px;
+    margin: 20px 0; }
+  .tabla1 td {
+    font-size: 20px;
+    margin: 30px 0; }
+  .ubicacionesGrid2 {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 400px auto auto;
+    grid-template-areas: "sucursalCentro" "tabla2" "ubicacionesMapa2";
+    margin-top: 45px;
+    margin-bottom: 100px; }
+  .sucursalCentro {
+    position: relative;
+    background-image: url(../imagenes/ubicaciones-img-2.jpg); }
+    .sucursalCentro:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 480px;
+      background-color: #161616c7;
+      height: 400px; }
+  .sucursalTituloC {
+    position: relative; }
+    .sucursalTituloC h2 {
+      font-size: 45px; }
+    .sucursalTituloC p {
+      font-size: 18px; }
+  .tabla2 h2 {
+    margin: 10px 0;
+    color: #533e2d;
+    font-weight: 600; }
+  .tabla2 table {
+    width: 90%; }
+  .tabla2 th {
+    font-size: 23px;
+    margin: 20px 0; }
+  .tabla2 td {
+    font-size: 20px;
+    margin: 30px 0; }
+  .ubicacionesGrid3 {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 400px auto auto;
+    grid-template-areas: "sucursalSur" "tabla3" "ubicacionesMapa3";
+    margin-top: 45px;
+    margin-bottom: 100px; }
+  .sucursalSur {
+    position: relative;
+    background-image: url(../imagenes/ubicaciones-img-3.jpg); }
+    .sucursalSur:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 480px;
+      background-color: #161616c7;
+      height: 400px; }
+  .sucursalTituloC {
+    position: relative; }
+    .sucursalTituloC h2 {
+      font-size: 45px; }
+    .sucursalTituloC p {
+      font-size: 18px; }
+  .tabla3 h2 {
+    margin: 10px 0;
+    color: #533e2d;
+    font-weight: 600; }
+  .tabla3 table {
+    width: 90%; }
+  .tabla3 th {
+    font-size: 23px;
+    margin: 20px 0; }
+  .tabla3 td {
+    font-size: 20px;
+    margin: 30px 0; } }
+
+/* QUERY PARA TABLETAS */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .ubicacionesCabecera {
+    height: 200px; }
+  .ubicacionesTitulo {
+    font-size: 50px;
+    margin: 20px 0; }
+  .ubicacionesGrid1 {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 400px auto;
+    grid-template-areas: "sucursalNorte ubicacionesImagen1" "tabla1 ubicacionesMapa1";
+    margin-top: 1px;
+    margin-bottom: 100px; }
+  .sucursalNorte {
+    background-color: #533e2d; }
+  .sucursalTituloC h2 {
+    font-size: 45px; }
+  .sucursalTituloC p {
+    font-size: 18px; }
+  .ubicacionesImagen1 {
+    background-image: url(../imagenes/ubicaciones-img-1.jpg);
+    background-position: center; }
+  .tabla1 h2 {
+    margin: 10px 0;
+    color: #533e2d;
+    font-weight: 600; }
+  .tabla1 table {
+    width: 90%; }
+  .tabla1 th {
+    font-size: 20px;
+    margin: 20px 0; }
+  .tabla1 td {
+    font-size: 17px;
+    margin: 30px 0; }
+  .ubicacionesGrid2 {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 400px auto;
+    grid-template-areas: "sucursalCentro ubicacionesImagen2" "tabla2 ubicacionesMapa2";
+    margin-top: 40px;
+    margin-bottom: 100px; }
+  .sucursalCentro {
+    background-color: #533e2d; }
+  .sucursalTituloC h2 {
+    font-size: 45px; }
+  .sucursalTituloC p {
+    font-size: 18px; }
+  .ubicacionesImagen2 {
+    background-image: url(../imagenes/ubicaciones-img-2.jpg);
+    background-position: center; }
+  .tabla2 h2 {
+    margin: 10px 0;
+    color: #533e2d;
+    font-weight: 600; }
+  .tabla2 table {
+    width: 90%; }
+  .tabla2 th {
+    font-size: 23px;
+    margin: 20px 0; }
+  .tabla2 td {
+    font-size: 20px;
+    margin: 30px 0; }
+  .ubicacionesGrid3 {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 400px auto;
+    grid-template-areas: "sucursalSur ubicacionesImagen3" "tabla3 ubicacionesMapa3";
+    margin-top: 40px;
+    margin-bottom: 100px; }
+  .sucursalSur {
+    background-color: #533e2d; }
+  .sucursalTituloC h2 {
+    font-size: 45px; }
+  .sucursalTituloC p {
+    font-size: 18px; }
+  .ubicacionesImagen3 {
+    background-image: url(../imagenes/ubicaciones-img-3.jpg);
+    background-position: center; }
+  .tabla3 h2 {
+    margin: 10px 0;
+    color: #533e2d;
+    font-weight: 600; }
+  .tabla3 table {
+    width: 90%; }
+  .tabla3 th {
+    font-size: 23px;
+    margin: 20px 0; }
+  .tabla3 td {
+    font-size: 20px;
+    margin: 30px 0; } }
+
+/* QUERY PARA NOTEBOOKS */
+@media screen and (min-width: 1024px) and (max-width: 1999px) {
+  .ubicacionesCabecera {
+    height: 400px; }
+  .ubicacionesTitulo {
+    font-size: 60px;
+    margin: 20px 0; }
+  .ubicacionesGrid1 {
+    display: grid;
+    grid-template-columns: 35% 65%;
+    grid-template-rows: 400px auto;
+    grid-template-areas: "sucursalNorte ubicacionesImagen1" "tabla1 ubicacionesMapa1";
+    margin-top: 3px;
+    margin-bottom: 100px; }
+  .sucursalNorte {
+    background-color: #533e2d; }
+  .sucursalTituloC h2 {
+    font-size: 55px; }
+  .sucursalTituloC p {
+    font-size: 22px; }
+  .ubicacionesImagen1 {
+    background-image: url(../imagenes/ubicaciones-img-1.jpg);
+    background-position: center; }
+  .tabla1 h2 {
+    margin: 10px 0;
+    color: #533e2d;
+    font-weight: 600; }
+  .tabla1 table {
+    width: 90%; }
+  .tabla1 th {
+    font-size: 20px;
+    margin: 20px 0; }
+  .tabla1 td {
+    font-size: 17px;
+    margin: 30px 0; }
+  .ubicacionesGrid2 {
+    display: grid;
+    grid-template-columns: 35% 65%;
+    grid-template-rows: 400px auto;
+    grid-template-areas: "sucursalCentro ubicacionesImagen2" "tabla2 ubicacionesMapa2";
+    margin-top: 40px;
+    margin-bottom: 100px; }
+  .sucursalCentro {
+    background-color: #533e2d; }
+  .sucursalTituloC h2 {
+    font-size: 55px; }
+  .sucursalTituloC p {
+    font-size: 22px; }
+  .ubicacionesImagen2 {
+    background-image: url(../imagenes/ubicaciones-img-2.jpg);
+    background-position: center; }
+  .tabla2 h2 {
+    margin: 10px 0;
+    color: #533e2d;
+    font-weight: 600; }
+  .tabla2 table {
+    width: 90%; }
+  .tabla2 th {
+    font-size: 23px;
+    margin: 20px 0; }
+  .tabla2 td {
+    font-size: 20px;
+    margin: 30px 0; }
+  .ubicacionesGrid3 {
+    display: grid;
+    grid-template-columns: 35% 65%;
+    grid-template-rows: 400px auto;
+    grid-template-areas: "sucursalSur ubicacionesImagen3" "tabla3 ubicacionesMapa3";
+    margin-top: 40px;
+    margin-bottom: 100px; }
+  .sucursalSur {
+    background-color: #533e2d; }
+  .sucursalTituloC h2 {
+    font-size: 55px; }
+  .sucursalTituloC p {
+    font-size: 22px; }
+  .ubicacionesImagen3 {
+    background-image: url(../imagenes/ubicaciones-img-3.jpg);
+    background-position: center; }
+  .tabla3 h2 {
+    margin: 10px 0;
+    color: #533e2d;
+    font-weight: 600; }
+  .tabla3 table {
+    width: 90%; }
+  .tabla3 th {
+    font-size: 23px;
+    margin: 20px 0; }
+  .tabla3 td {
+    font-size: 20px;
+    margin: 30px 0; } }
+
+/* QUERY PARA PANTALLAS GRANDES */
+@media screen and (min-width: 1200px) {
+  .ubicacionesCabecera {
+    height: 400px; }
+  .ubicacionesTitulo {
+    font-size: 60px;
+    margin: 20px 0; }
+  .ubicacionesGrid1 {
+    display: grid;
+    grid-template-columns: 35% 65%;
+    grid-template-rows: 400px auto;
+    grid-template-areas: "sucursalNorte ubicacionesImagen1" "tabla1 ubicacionesMapa1";
+    margin-top: 3px;
+    margin-bottom: 100px; }
+  .sucursalNorte {
+    background-color: #533e2d; }
+  .sucursalTituloC h2 {
+    font-size: 55px; }
+  .sucursalTituloC p {
+    font-size: 20px; }
+  .ubicacionesImagen1 {
+    background-image: url(../imagenes/ubicaciones-img-1.jpg);
+    background-position: center; }
+  .tabla1 h2 {
+    margin: 10px 0;
+    color: #533e2d;
+    font-weight: 600; }
+  .tabla1 table {
+    width: 90%; }
+  .tabla1 th {
+    font-size: 23px;
+    margin: 20px 0; }
+  .tabla1 td {
+    font-size: 20px;
+    margin: 30px 0; }
+  .ubicacionesGrid2 {
+    display: grid;
+    grid-template-columns: 35% 65%;
+    grid-template-rows: 400px auto;
+    grid-template-areas: "sucursalCentro ubicacionesImagen2" "tabla2 ubicacionesMapa2";
+    margin-top: 40px;
+    margin-bottom: 100px; }
+  .sucursalCentro {
+    background-color: #533e2d; }
+  .sucursalTituloC h2 {
+    font-size: 55px; }
+  .sucursalTituloC p {
+    font-size: 20px; }
+  .ubicacionesImagen2 {
+    background-image: url(../imagenes/ubicaciones-img-2.jpg);
+    background-position: center; }
+  .tabla2 h2 {
+    margin: 10px 0;
+    color: #533e2d;
+    font-weight: 600; }
+  .tabla2 table {
+    width: 90%; }
+  .tabla2 th {
+    font-size: 23px;
+    margin: 20px 0; }
+  .tabla2 td {
+    font-size: 20px;
+    margin: 30px 0; }
+  .ubicacionesGrid3 {
+    display: grid;
+    grid-template-columns: 35% 65%;
+    grid-template-rows: 400px auto;
+    grid-template-areas: "sucursalSur ubicacionesImagen3" "tabla3 ubicacionesMapa3";
+    margin-top: 40px;
+    margin-bottom: 100px; }
+  .sucursalSur {
+    background-color: #533e2d; }
+  .sucursalTituloC h2 {
+    font-size: 55px; }
+  .sucursalTituloC p {
+    font-size: 22px; }
+  .ubicacionesImagen3 {
+    background-image: url(../imagenes/ubicaciones-img-3.jpg);
+    background-position: center; }
+  .tabla3 h2 {
+    margin: 10px 0;
+    color: #533e2d;
+    font-weight: 600; }
+  .tabla3 table {
+    width: 90%; }
+  .tabla3 th {
+    font-size: 23px;
+    margin: 20px 0; }
+  .tabla3 td {
+    font-size: 20px;
+    margin: 30px 0; } }
+
+.contactoCabecera {
+  background-image: url(../imagenes/contacto-head.jpg);
+  margin-top: 80px; }
+
+.contactoText {
+  margin: 30px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+.contactoTitulo {
+  text-align: center;
+  margin: 15px 0; }
+
+.contactoSubtituloC {
+  margin: 50px 10px 10px 10px; }
+
+.contactoSubtitulo {
+  text-align: center; }
+
+.contactoFlex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+#contactForm {
+  margin: 100px 0 100px 0; }
+
+.form-control {
+  font-family: 'Montserrat';
+  border-radius: 20px;
+  background-color: #fff8f1;
+  color: #79d1cd;
+  font-weight: 600;
+  border: 3px solid;
+  border-color: #79d1cd; }
+
+.form-label {
+  font-family: 'Montserrat'; }
+
+.botonContacto {
+  background-color: #79d1cd;
+  border-radius: 15px;
+  color: #533e2d; }
+  .botonContacto:hover {
+    background-color: #533e2d;
+    color: #fff8f1; }
+
+/* QUERY PARA MOVILES */
+@media screen and (min-width: 320px) and (max-width: 599px) {
+  .contactoCabecera {
+    height: 200px; }
+  .contactoTitulo {
+    font-size: 38px;
+    margin: 20px 0; }
+  .contactoSubtitulo {
+    font-size: 27px; }
+  .form-label {
+    font-size: 20px; } }
+
+/* QUERY PARA TABLETAS PEQUEÑAS */
+@media screen and (min-width: 600px) and (max-width: 767px) {
+  .contactoCabecera {
+    height: 200px; }
+  .contactoTitulo {
+    font-size: 45px;
+    margin: 20px 0; }
+  .contactoSubtitulo {
+    font-size: 27px; }
+  .form-label {
+    font-size: 20px; } }
+
+/* QUERY PARA TABLETAS */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .contactoCabecera {
+    height: 300px; }
+  .contactoTitulo {
+    font-size: 50px;
+    margin: 20px 0; }
+  .contactoSubtitulo {
+    font-size: 32px; }
+  .form-label {
+    font-size: 23px; } }
+
+/* QUERY PARA NOTEBOOKS */
+@media screen and (min-width: 1024px) and (max-width: 1999px) {
+  .contactoCabecera {
+    height: 400px; }
+  .contactoTitulo {
+    font-size: 60px;
+    margin: 20px 0; }
+  .contactoSubtitulo {
+    font-size: 34px; }
+  .form-label {
+    font-size: 25px; } }
+
+/* QUERY PARA PANTALLAS GRANDES */
+@media screen and (min-width: 1200px) {
+  .contactoCabecera {
+    height: 400px; }
+  .contactoTitulo {
+    font-size: 60px;
+    margin: 20px 0; }
+  .contactoSubtitulo {
+    font-size: 34px; }
+  .form-label {
+    font-size: 25px; } }
 
 header {
   grid-area: header;
@@ -774,16 +1615,37 @@ footer {
   grid-area: footer;
   background-color: #79d1cd; }
 
-.btn {
+.loQuiero {
   font-family: 'Montserrat';
   border-radius: 25px;
   background-color: #fff8f1;
   color: #533e2d;
-  border: 3px solid #79d1cd;
+  border: 3px solid #533e2d;
   font-weight: 600;
   padding: 15px; }
-  .btn:hover {
-    background-color: #79d1cd;
-    color: #533e2d;
+  .loQuiero:hover {
+    background-color: #533e2d;
+    color: #fff8f1;
     border: 3px solid #533e2d;
     transition: .2s; }
+
+.botonGeneral {
+  font-family: 'Montserrat';
+  border-radius: 25px;
+  background-color: #fff8f1;
+  color: #533e2d;
+  border: 3px solid #533e2d;
+  font-weight: 600;
+  padding: 15px; }
+  .botonGeneral:hover {
+    background-color: #533e2d;
+    color: #fff8f1;
+    border: 3px solid #fff8f1;
+    transition: .2s; }
+
+.whatsapp {
+  width: 60px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 0 10px 15px 0; }

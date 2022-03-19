@@ -1,0 +1,33 @@
+.loQuiero {
+    font-family: 'Montserrat';
+    border-radius: 25px;
+    background-color: $colorCuarto;
+    color: $colorSecundario;
+    border: 3px solid $colorSecundario;
+    font-weight: 600;
+    padding: 15px;
+
+    &:hover {
+        background-color: $colorSecundario;
+        color: $colorCuarto;
+        border: 3px solid $colorSecundario;
+        transition: .2s;
+    } 
+}
+
+.botonGeneral {
+    font-family: 'Montserrat';
+    border-radius: 25px;
+    background-color: $colorCuarto;
+    color: $colorSecundario;
+    border: 3px solid $colorSecundario;
+    font-weight: 600;
+    padding: 15px;
+
+    &:hover {
+        background-color: $colorSecundario;
+        color: $colorCuarto;
+        border: 3px solid $colorCuarto;
+        transition: .2s;
+    } 
+}

@@ -3,10 +3,16 @@
 .heroMain {
     @extend .cajas-imagen-fondo;
     background-image: $backgroundHero;
+    background-position: top;
     height: 90vh;
     margin: 80px 0 0 0;
+    &:before {
+        @extend .fondo-oscuro;
+    }  
 }
 .mainContainer {
+    position: relative;
+    color: $colorTercero;
     display: flex;
     flex-direction: column;
     align-items:flex-start;
@@ -92,21 +98,25 @@
 .verMas {
     @extend .cajas-imagen-fondo;
     background-image: $backgroundVerMas;
-    height: 800px;
+    height: 600px;
     margin-top: 40px;
+    &:before {
+        @extend .fondo-oscuro;
+    }
 }
 
 .textMas {
     @extend .cajas-texto-fondo;
     h2 {
-        color: $colorTercero;
-        margin: 30px 0;
+        @extend .titulo-fondo-oscuro;
+    }
+    button {
+        position: relative;
     }
 }
 
 // QUERY PARA MOVILES
 @media screen and (min-width: 320px) and (max-width: 599px) {
-    /* --------------------------INDEX------------------------ */
     /* ESTILOS GENERALES */
     .bodyIndex {
         display: grid;
@@ -123,7 +133,7 @@
     }   
 
     .mainTittle {
-        @include titulos-sizes (32px, 20px 0);
+        @include titulos-sizes (42px, 20px 0);
     }
 
     .mainSubtittle {
@@ -135,7 +145,7 @@
     }
 
     .mainButton {
-        @include titulos-sizes (15px, 10px 0);
+        @include titulos-sizes (16px, 10px 0);
     }
 
     /* GENERALES MAS VENDIDOS */
@@ -192,11 +202,11 @@
     }
 
     .mainText {
-        @include titulos-sizes (35px, 10px 0);
+        @include titulos-sizes (25px, 10px 0);
     }
 
     .mainButton {
-        @include titulos-sizes (25px, 10px 0);
+        @include titulos-sizes (18px, 10px 0);
     }
 
     /* GENERALES MAS VENDIDOS */
@@ -253,11 +263,11 @@
     }
 
     .mainText {
-        @include titulos-sizes (45px, 10px 0);
+        @include titulos-sizes (30px, 10px 0);
     }
 
     .mainButton {
-        @include titulos-sizes (25px, 10px 0);
+        @include titulos-sizes (18px, 10px 0);
     }
 
     /* GENERALES MAS VENDIDOS */
@@ -319,7 +329,7 @@
    
 
     .mainButton {
-        @include titulos-sizes (25px, 10px 0);
+        @include titulos-sizes (18px, 10px 0);
     }
     
    /* PRODUCT SECTION */
@@ -378,7 +388,7 @@
     }
    
     .mainButton {
-        @include titulos-sizes (25px, 10px 0);
+        @include titulos-sizes (18px, 10px 0);
     }      
 
     /* PRODUCT SECTION */

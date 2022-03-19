@@ -1,60 +1,12 @@
+@import "reset.scss";
 @import "variables.scss";
 @import "index.scss";
 @import "nav.scss";
 @import "footer.scss";
 @import "menu.scss";
 @import "conocenos.scss";
- 
-* {
-    padding: 0;
-    margin: 0;
-}
-
-h1, h2, h3, p {
-    font-family: $fuentePrincipal;
-}
-
-h2 {
-    font-weight: $h2Weigth;
-}
-
-h3 {
-    font-weight: $h3Weigth;
-}
-
-header {
-    grid-area: header;
-    background-color: $colorPrincipal;
-    height: auto;
-}
-
-body {
-    background-color: $colorCuarto;
-}
-
-main {
-    grid-area: main;
-    height: auto;
-}
-
-footer {
-    grid-area: footer;
-    background-color: $colorPrincipal;
-}
-
-.btn {
-    font-family: 'Montserrat';
-    border-radius: 25px;
-    background-color: $colorCuarto;
-    color: $colorSecundario;
-    border: 3px solid $colorPrincipal;
-    font-weight: 600;
-    padding: 15px;
-
-    &:hover {
-        background-color: $colorPrincipal;
-        color: $colorSecundario;
-        border: 3px solid $colorSecundario;
-        transition: .2s;
-    } 
-}
+@import "ubicaciones.scss";
+@import "contacto.scss";
+@import "layout.scss";
+@import "botones.scss";
+@import "whatsapp.scss";

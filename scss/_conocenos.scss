@@ -1,7 +1,18 @@
 // GENERALES CONOCENOS
 .conocenosP {
     @include parrafos-conocenos;
-    grid-area: conocenosP; 
+}
+
+.parrafo1 {
+    grid-area: parrafo1;
+}
+
+.parrafo2 {
+    grid-area: parrafo2;
+}
+
+.parrafo3 {
+    grid-area: parrafo3;
 }
 
 .conocenosImage1 {
@@ -14,57 +25,101 @@
     @include imagen-conocenos-contenedor;
 }
 
-.visitanosContainer {
-    background-image: $backgroundVisitanos;
-    @extend .cajas-imagen-fondo;
-    height: 500px;
-    margin-top: 80px;
-    color: $colorTercero;
-    .visitanos {
-        @extend .cajas-texto-fondo;  
-        h1 {
-            margin: 30px;
-        }
-    }
+.conocenosImage3 {
+    @include imagen-conocenos-contenedor;
+    grid-area: conocenosImage3;
 }
 
+.conocenosImage4 {
+    @include imagen-conocenos-contenedor;
+    grid-area: conocenosImage4;
+}
+
+// CABECERA CONOCENOS
 .cabeceraConocenos {
     background-image: $backgroundConocenos;
     @extend .cajas-imagen-fondo;
     height: 400px;
     margin: 80px 0 30px 0;
+    &:before {
+        @extend .fondo-oscuro;
+    }
     h1 {
-        color: $colorTercero;
-        text-align: center;
+        @extend .titulo-fondo-oscuro;
     }
 }
+
+// VISITANOS SECCION
+.visitanosContainer {
+    background-image: $backgroundVisitanos;
+    @extend .cajas-imagen-fondo;
+    height: 600px;
+    margin-top: 80px;
+    &:before {
+        @extend .fondo-oscuro;
+    }
+    .visitanos {
+        @extend .cajas-texto-fondo;  
+        h1 {
+            margin: 30px;
+            @extend .titulo-fondo-oscuro;
+        }
+        button {
+            position: relative;
+        }
+    }
+}
+
 
 /* QUERY PARA MOVILES */
 @media screen and (min-width: 320px) and (max-width: 599px) {
     .conocenosGrid {
         display: grid;
         grid-template-columns: 100%;
-        grid-template-rows: auto auto auto auto auto;
-        grid-template-areas: "conocenosImage1"
-                             "conocenosP" 
-                             "conocenosP"
-                             "conocenosImage2";
+        grid-template-rows: auto auto auto auto auto auto auto;
+        grid-template-areas: "parrafo1"
+                             "conocenosImage1" 
+                             "parrafo2"
+                             "conocenosImage2"
+                             "parrafo3"
+                             "conocenosImage3"
+                             "conocenosImage4";
     }
 
     .cabeceraConocenos {
-        height: 35vh;
+        height: 200px;
         h1 {
-            @include titulos-sizes (35px, 10px);
+            @include titulos-sizes (38px, 20px 0);
         }
     }
 
     .conocenosImg {
-        @include imagen-conocenos-ancho (300px, 10px, 0px);
+        @include imagen-conocenos-ancho (300px, 10px, 10px 0);
+    }
+
+    .conocenosDuenos {
+        @include imagen-conocenos-ancho (98%, 10px, 50px 0)
+    }
+
+    .conocenosTitulo {
+        font-family: 'Montserrat';
+        font-weight: 600;
+        color: $colorSecundario;
+        text-align: left;
+        margin: 35px 0;
+        font-size: 30px
     }
 
     .conocenosP {
         @include parrafos-conocenos;
         padding: 20px 20px;
+        p {
+            font-size: 18px;
+        }
+    }
+
+    .conocenosImage4 {
+        margin-top: 40px;
     }
 
     .visitanos {  
@@ -79,27 +134,50 @@
     .conocenosGrid {
         display: grid;
         grid-template-columns: 100%;
-        grid-template-rows: auto auto auto auto auto;
-        grid-template-areas: "conocenosImage1"
-                             "conocenosP" 
-                             "conocenosP"
-                             "conocenosImage2";
+        grid-template-rows: auto auto auto auto auto auto auto;
+        grid-template-areas: "parrafo1"
+                             "conocenosImage1" 
+                             "parrafo2"
+                             "conocenosImage2"
+                             "parrafo3"
+                             "conocenosImage3"
+                             "conocenosImage4";
     }
 
     .cabeceraConocenos {
-        height: 35vh;
+        height: 200px;
         h1 {
-            @include titulos-sizes (45px, 10px);
+            @include titulos-sizes (45px, 20px 0);
         }
     }
 
     .conocenosImg {
-        @include imagen-conocenos-ancho (400px, 10px, 0px);
+        @include imagen-conocenos-ancho (70%, 10px, 15px 0);
     }
 
+    .conocenosDuenos {
+        @include imagen-conocenos-ancho (98%, 10px, 50px 0)
+    }
+
+    .conocenosTitulo {
+        font-family: 'Montserrat';
+        font-weight: 600;
+        color: $colorSecundario;
+        text-align: left;
+        margin: 35px 0;
+        font-size: 35px
+    }
+    
     .conocenosP {
         @include parrafos-conocenos;
         padding: 40px 40px;
+        p {
+            font-size: 20px;
+        }
+    }
+
+    .conocenosImage4 {
+        margin-top: 40px;
     }
 
     .visitanos {  
@@ -114,27 +192,50 @@
     .conocenosGrid {
         display: grid;
         grid-template-columns: 100%;
-        grid-template-rows: auto auto auto auto auto;
-        grid-template-areas: "conocenosImage1"
-                             "conocenosP" 
-                             "conocenosP"
-                             "conocenosImage2";
+        grid-template-rows: auto auto auto auto auto auto auto;
+        grid-template-areas: "parrafo1"
+                             "conocenosImage1" 
+                             "parrafo2"
+                             "conocenosImage2"
+                             "parrafo3"
+                             "conocenosImage3"
+                             "conocenosImage4";
     }
 
     .cabeceraConocenos {
-        height: 35vh;
+        height: 300px;
         h1 {
-            @include titulos-sizes (45px, 10px);
+            @include titulos-sizes (50px, 20px 0);
         }
     }
 
     .conocenosImg {
-        @include imagen-conocenos-ancho (480px, 10px, 0px);
+        @include imagen-conocenos-ancho (75%, 10px, 15px 0);
     }
 
+    .conocenosDuenos {
+        @include imagen-conocenos-ancho (95%, 10px, 50px 0)
+    }
+
+    .conocenosTitulo {
+        font-family: 'Montserrat';
+        font-weight: 600;
+        color: $colorSecundario;
+        text-align: left;
+        margin: 35px 0;
+        font-size: 38px
+    }
+    
     .conocenosP {
         @include parrafos-conocenos;
-        padding: 50px 50px;
+        padding: 40px 40px;
+        p {
+            font-size: 20px;
+        }
+    }
+
+    .conocenosImage4 {
+        margin-top: 40px;
     }
 
     .visitanos {  
@@ -150,25 +251,47 @@
         height: auto;
         display: grid;
         grid-template-columns: 60% 40%;
-        grid-template-rows: auto auto;
-        grid-template-areas: "conocenosP conocenosImage1"
-                             "conocenosP conocenosImage2";
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas: "parrafo1 conocenosImage1"
+                             "parrafo2 conocenosImage2"
+                             "parrafo3 conocenosImage3"
+                             "conocenosImage4 conocenosImage4";
     }
 
     .cabeceraConocenos {
-        height: 45vh;
+        height: 400px;
         h1 {
-            @include titulos-sizes (55px, 10px);
+            @include titulos-sizes (60px, 20px 0);
         }
     }
 
     .conocenosImg {
-        @include imagen-conocenos-ancho (480px, 10px, 40px 0);
+        @include imagen-conocenos-ancho (90%, 10px, 15px 0);
     }
 
+    .conocenosDuenos {
+        @include imagen-conocenos-ancho (75%, 10px, 50px 0)
+    }
+
+    .conocenosTitulo {
+        font-family: 'Montserrat';
+        font-weight: 600;
+        color: $colorSecundario;
+        text-align: left;
+        margin: 35px 0;
+        font-size: 40px
+    }
+    
     .conocenosP {
         @include parrafos-conocenos;
-        padding: 50px 50px;
+        padding: 40px 40px;
+        p {
+            font-size: 19px;
+        }
+    }
+
+    .conocenosImage4 {
+        margin-top: 60px;
     }
 
     .visitanos {  
@@ -184,25 +307,47 @@
         height: auto;
         display: grid;
         grid-template-columns: 60% 40%;
-        grid-template-rows: auto auto;
-        grid-template-areas: "conocenosP conocenosImage1"
-                             "conocenosP conocenosImage2";
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas: "parrafo1 conocenosImage1"
+                             "parrafo2 conocenosImage2"
+                             "parrafo3 conocenosImage3"
+                             "conocenosImage4 conocenosImage4";
     }
 
     .cabeceraConocenos {
         height: 400px;
         h1 {
-            @include titulos-sizes (60px, 10px);
+            @include titulos-sizes (60px, 20px 0);
         }
     }
 
     .conocenosImg {
-        @include imagen-conocenos-ancho (480px, 10px, 40px 0);
+        @include imagen-conocenos-ancho (90%, 10px, 15px 0);
     }
 
+    .conocenosDuenos {
+        @include imagen-conocenos-ancho (65%, 10px, 50px 0)
+    }
+
+    .conocenosTitulo {
+        font-family: 'Montserrat';
+        font-weight: 600;
+        color: $colorSecundario;
+        text-align: left;
+        margin: 35px 0;
+        font-size: 40px
+    }
+    
     .conocenosP {
         @include parrafos-conocenos;
-        padding: 50px 50px;
+        padding: 40px 40px;
+        p {
+            font-size: 19px;
+        }
+    }
+
+    .conocenosImage4 {
+        margin-top: 60px;
     }
 
     .visitanos {  

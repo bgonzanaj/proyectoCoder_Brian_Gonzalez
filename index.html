@@ -19,12 +19,11 @@
 </head>
 <body class="bodyIndex">
     <!-- CODIGO HEADER Y NAV -->
-
     <header class="navContainer fixed-top">
         <nav class="navbar navbar-expand-lg navbar-dark" style="font-weight: 600; font-size: 20px;">
             <div class="container-fluid">
                 <a class="navbar-brand" href="index.html">
-                    <img id="mainLogo"><img class="logo" src="imagenes/abICElogo.png" alt="logo AB Ice Cream">
+                    <img id="mainLogo"><img class="logo" src="imagenes/abICElogo.svg" alt="logo AB Ice Cream">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
@@ -55,11 +54,11 @@
     <main class="inicioMain">
         <!-- CODIGO HERO SECTION -->
         <section class="heroMain">
-                <div class="mainContainer">
-                    <h1 class="mainTittle">Y tu helado...<br>¿de qué lo vas a querer?</h1>
-                    <p class="mainText">Prueba uno ¡y quedarás helado!</p>
-                    <a href="paginas/menu.html"><button class="btn btn-outline animate__animated animate__shakeY mainButton mainButton">Ver menú</button></a>
-                </div>
+            <div class="mainContainer">
+                <h1 class="mainTittle">Y tu helado...<br>¿de qué lo vas a querer?</h1>
+                <p class="mainText">Prueba uno ¡y quedarás helado!</p>
+                <a href="paginas/menu.html"><button class="btn btn-outline animate__animated animate__shakeY botonGeneral">Ver menú</button></a>
+            </div>
         </section>
 
         <!-- CODIGO PRODUTOS MAS VENDIDOS BOOTSTRAP -->
@@ -70,7 +69,7 @@
                         <h2 class="masTittle">¡Los más vendidos!</h2>
                         <h3 class="masSubtittle">Descubre lo que todo el mundo está probando</h3>
                         <a href="">
-                            <button class="btn btn-outline">Saber más</button>
+                            <button class="btn btn-outline loQuiero">Saber más</button>
                         </a>
                     </div>
                 </div>
@@ -115,6 +114,7 @@
                 <h3 class="productSubtittle">Échale un vistazo a nuestras mejores creaciones</h3>
             </div>
 
+            <!-- PRIMERA RONDA DE PRODUCTOS -->
             <div class="productosIndex1">
                 <div class="row">
                     <div class="col col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
@@ -125,8 +125,8 @@
                                 </a>
                             </div>
                             <div>
-                                <h3 class="tittleProduct">Lorem, ipsum dolor.</h3>
-                                <p class="textProduct">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                <h3 class="tittleProduct">Helado Supremo</h3>
+                                <p class="textProduct">Uno de los más solicitados, una mezcla perfecta de nuestro helado de vainilla artesanal con crema irlandesa.</p>
                             </div>
                             <div class="buttonContainer">
                                 <a href="#">
@@ -143,8 +143,8 @@
                                 </a>
                             </div>
                             <div>
-                                <h3 class="tittleProduct">Lorem, ipsum.</h3>
-                                <p class="textProduct">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                                <h3 class="tittleProduct">Volcan de cacao</h3>
+                                <p class="textProduct">Helado a base de cacao artesanal, vainilla y un toque de café.</p>
                             </div>
                             <div class="buttonContainer">
                                 <a href="#">
@@ -161,8 +161,8 @@
                                 </a>
                             </div>
                             <div>
-                                <h3 class="tittleProduct">Lorem ipsum dolor sit.</h3>
-                                <p class="textProduct">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                <h3 class="tittleProduct">Fresa cremosa</h3>
+                                <p class="textProduct">Helado natural hecho de fresa y un toque de yogurt natural.</p>
                             </div>
                             <div class="buttonContainer">
                                 <a href="#">
@@ -174,6 +174,7 @@
                 </div>
             </div>
             
+            <!-- SEGUNDA RONDA DE PRODUCTOS -->
             <div class="productosIndex2">
                 <div class="row">
                     <div class="col col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
@@ -184,8 +185,8 @@
                                 </a>
                             </div>
                             <div>
-                                <h3 class="tittleProduct">Lorem, ipsum.</h3>
-                                <p class="textProduct">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                <h3 class="tittleProduct">Menta fresca</h3>
+                                <p class="textProduct">Delicioso helado de menta con un fondo de chocolate artesanal.</p>
                             </div>
                             <div class="buttonContainer">
                                 <a href="#">
@@ -202,8 +203,8 @@
                                 </a>
                             </div>
                             <div>
-                                <h3 class="tittleProduct">Lorem ipsum dolor sit.</h3>
-                                <p class="textProduct">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                <h3 class="tittleProduct">Plátano con crema</h3>
+                                <p class="textProduct">Uno de los clásicos, un delicioso helado de mezcla de plátano y crema natural.</p>
                             </div>
                             <div class="buttonContainer">
                                 <a href="#">
@@ -220,8 +221,8 @@
                                 </a>
                             </div>
                             <div>
-                                <h3 class="tittleProduct">Lorem, ipsum dolor.</h3>
-                                <p class="textProduct">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                <h3 class="tittleProduct">Latte especial</h3>
+                                <p class="textProduct">El delicioso sabor de un latte hecho helado</p>
                             </div>
                             <div class="buttonContainer">
                                 <a href="#">
@@ -239,7 +240,7 @@
             <div class="verMas">
                 <div class="textMas">
                     <h2 class="tittleMas">¿Antojo de más?</h2>
-                    <a href="paginas/menu.html"><button class="btn btn-outline">Ver menú completo</button></a>
+                    <a href="paginas/menu.html"><button class="btn btn-outline botonGeneral">Ver menú completo</button></a>
                 </div>
             </div>
         </section>
@@ -253,10 +254,12 @@
 
     <!-- CODIGO FOOTER -->
     <footer>
+        <!-- LOGO FOOTER -->
         <div class="logoFooter">
-            <a href="index.html"><img src="imagenes/abICElogo.png" alt="Logo AB Ice Cream"></a>
+            <a href="index.html"><img src="imagenes/abICElogo.svg" alt="Logo AB Ice Cream"></a>
         </div>
 
+        <!-- REDES SOCIALES FOOTER -->
         <div class="redesFooter">
             <div>
                 <a href="#">
@@ -291,6 +294,7 @@
             </div>
         </div>
 
+        <!-- NAV FOOTER -->
         <div class="navFooter">             
             <ul class="ulFooter">
                 <li><a href="index.html">Inicio</a></li>
@@ -301,6 +305,7 @@
             </ul>
         </div>
 
+        <!-- CREDITOS FOOTER -->
         <div class="buttonFooter">
             <p>Sitio web desarollado por <a href="#">Brian González</a></p>
         </div>

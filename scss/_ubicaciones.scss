@@ -1,0 +1,824 @@
+/* --------UBICACIONES GENERALES--------- */
+
+.ubicacionesCabecera {
+    @extend .cajas-imagen-fondo;
+    background-image: url(../imagenes/ubicaciones-head.jpg);
+    margin-top: 80px;
+    &:before {
+        @extend .fondo-oscuro; 
+    }
+    h1 {
+        @extend .titulo-fondo-oscuro;
+    }
+}
+
+.botonWhatsapp {
+    background-color: $colorSecundario;
+    color: $colorCuarto;
+    border-radius: 20px;
+    font-weight: 600;
+    padding: 13px;
+    border: 3px solid $colorCuarto;
+    &:hover {
+        background-color: rgb(121, 224, 121);
+        color: $colorSecundario;
+        transition: .2s;
+    }
+}
+
+.sucursalNorte, .sucursalCentro, .sucursalSur {
+    @include ubicaciones-titulo-contenedor;
+    background-size: cover;
+}
+
+.sucursalTituloC {
+    margin-left: 5%;
+}
+
+.ubicacionesImagen1, .ubicacionesImagen2, .ubicacionesImagen3 {
+    @include ubicaciones-imagen;
+}
+
+.tabla1, .tabla2, .tabla3 {
+    @include ubicaciones-tabla;
+}
+
+.ubicacionesMapa1, .ubicacionesMapa2, .ubicacionesMapa3 {
+    @include ubicacionesMapas;
+}
+
+.ubicacionesContainer {
+    margin-bottom: 100px;
+}
+
+.sucursalNorte {
+    grid-area: sucursalNorte;
+}
+
+.sucursalCentro {
+    grid-area: sucursalCentro;
+}
+
+.sucursalSur {
+    grid-area: sucursalSur;
+}
+
+.ubicacionesImagen1 {
+    grid-area: ubicacionesImagen1;
+}
+
+.ubicacionesImagen2 {
+    grid-area: ubicacionesImagen2;
+}
+
+.ubicacionesImagen3 {
+    grid-area: ubicacionesImagen3;
+}
+
+.tabla1 {
+    grid-area: tabla1;
+}
+
+.tabla2 {
+    grid-area: tabla2;
+}
+
+.tabla3 {
+    grid-area: tabla3;
+}
+
+.ubicacionesMapa1 {
+    grid-area: ubicacionesMapa1;
+}
+
+.ubicacionesMapa2 {
+    grid-area: ubicacionesMapa2;
+}
+
+.ubicacionesMapa3 {
+    grid-area: ubicacionesMapa3;
+}
+
+/* QUERY PARA MOVILES */
+@media screen and (min-width: 320px) and (max-width: 599px) {
+    .ubicacionesCabecera {
+        height: 200px;
+    }
+    
+    .ubicacionesTitulo {
+        @include titulos-sizes (38px, 20px 0);
+    }
+
+    .ubicacionesGrid1 {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 400px auto auto;
+        grid-template-areas:"sucursalNorte"
+                            "tabla1"
+                            "ubicacionesMapa1";
+        margin-top: 1px;
+        margin-bottom: 100px;
+    }
+    .sucursalNorte {
+        position: relative;
+        background-image: url(../imagenes/ubicaciones-img-1.jpg);
+        &:before {
+            @include ubicaciones-fondo-oscuro;
+            height: 400px;
+        }
+    }
+    .sucursalTituloC {
+        position: relative;
+        h2 {
+            font-size: 45px;
+        }
+        p {
+            font-size: 18px;
+        }
+    }
+    .tabla1 {
+        h2 {
+            margin: 10px 0;
+            color: $colorSecundario;
+            font-weight: 600;
+        }
+        table {
+            width: 90%;
+        }
+        th {
+            font-size: 20px;
+            margin: 20px 0;
+        }
+        td {
+            font-size: 17px;
+            margin: 30px 0;
+        }
+    }
+
+
+    .ubicacionesGrid2 {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 400px auto auto;
+        grid-template-areas:"sucursalCentro"
+                            "tabla2"
+                            "ubicacionesMapa2";
+        margin-top: 45px;
+        margin-bottom: 100px;
+    }
+
+    .sucursalCentro {
+        position: relative;
+        background-image: url(../imagenes/ubicaciones-img-2.jpg);
+        &:before {
+            @include ubicaciones-fondo-oscuro;
+            height: 400px;
+        }
+    }
+    .sucursalTituloC {
+        position: relative;
+        h2 {
+            font-size: 45px;
+        }
+        p {
+            font-size: 18px;
+        }
+    }
+    .tabla2 {
+        h2 {
+            margin: 10px 0;
+            color: $colorSecundario;
+            font-weight: 600;
+        }
+        table {
+            width: 90%;
+        }
+        th {
+            font-size: 23px;
+            margin: 20px 0;
+        }
+        td {
+            font-size: 20px;
+            margin: 30px 0;
+        }
+    }
+
+    .ubicacionesGrid3 {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 400px auto auto;
+        grid-template-areas:"sucursalSur"
+                            "tabla3"
+                            "ubicacionesMapa3";
+        margin-top: 45px;
+        margin-bottom: 100px;
+    }
+
+    .sucursalSur {
+        position: relative;
+        background-image: url(../imagenes/ubicaciones-img-3.jpg);
+        &:before {
+            @include ubicaciones-fondo-oscuro;
+            height: 400px;
+        }
+    }
+    .sucursalTituloC {
+        position: relative;
+        h2 {
+            font-size: 45px;
+        }
+        p {
+            font-size: 18px;
+        }
+    }
+    .tabla3 {
+        h2 {
+            margin: 10px 0;
+            color: $colorSecundario;
+            font-weight: 600;
+        }
+        table {
+            width: 90%;
+        }
+        th {
+            font-size: 23px;
+            margin: 20px 0;
+        }
+        td {
+            font-size: 20px;
+            margin: 30px 0;
+        }
+    }
+}
+
+/* QUERY PARA TABLETAS PEQUEÑAS */
+@media screen and (min-width: 600px) and (max-width: 767px) {
+    .ubicacionesCabecera {
+        height: 200px;
+    } 
+
+    .ubicacionesTitulo {
+        @include titulos-sizes (45px, 20px 0);
+    }
+
+    .ubicacionesGrid1 {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 400px auto auto;
+        grid-template-areas:"sucursalNorte"
+                            "tabla1"
+                            "ubicacionesMapa1";
+        margin-top: 1px;
+        margin-bottom: 100px;
+    }
+
+    .sucursalNorte {
+        position: relative;
+        background-image: url(../imagenes/ubicaciones-img-1.jpg);
+        &:before {
+            @include ubicaciones-fondo-oscuro;
+            height: 400px;
+        }
+    }
+    .sucursalTituloC {
+        position: relative;
+        h2 {
+            font-size: 45px;
+        }
+        p {
+            font-size: 18px;
+        }
+    }
+    .tabla1 {
+        h2 {
+            margin: 10px 0;
+            color: $colorSecundario;
+            font-weight: 600;
+        }
+        table {
+            width: 90%;
+        }
+        th {
+            font-size: 23px;
+            margin: 20px 0;
+        }
+        td {
+            font-size: 20px;
+            margin: 30px 0;
+        }
+    }
+
+
+    .ubicacionesGrid2 {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 400px auto auto;
+        grid-template-areas:"sucursalCentro"
+                            "tabla2"
+                            "ubicacionesMapa2";
+        margin-top: 45px;
+        margin-bottom: 100px;
+    }
+    .sucursalCentro {
+        position: relative;
+        background-image: url(../imagenes/ubicaciones-img-2.jpg);
+        &:before {
+            @include ubicaciones-fondo-oscuro;
+            height: 400px;
+        }
+    }
+    .sucursalTituloC {
+        position: relative;
+        h2 {
+            font-size: 45px;
+        }
+        p {
+            font-size: 18px;
+        }
+    }
+    .tabla2 {
+        h2 {
+            margin: 10px 0;
+            color: $colorSecundario;
+            font-weight: 600;
+        }
+        table {
+            width: 90%;
+        }
+        th {
+            font-size: 23px;
+            margin: 20px 0;
+        }
+        td {
+            font-size: 20px;
+            margin: 30px 0;
+        }
+    }
+
+
+    .ubicacionesGrid3 {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 400px auto auto;
+        grid-template-areas:"sucursalSur"
+                            "tabla3"
+                            "ubicacionesMapa3";
+        margin-top: 45px;
+        margin-bottom: 100px;
+    }
+    .sucursalSur {
+        position: relative;
+        background-image: url(../imagenes/ubicaciones-img-3.jpg);
+        &:before {
+            @include ubicaciones-fondo-oscuro;
+            height: 400px;
+        }
+    }
+    .sucursalTituloC {
+        position: relative;
+        h2 {
+            font-size: 45px;
+        }
+        p {
+            font-size: 18px;
+        }
+    }
+    .tabla3 {
+        h2 {
+            margin: 10px 0;
+            color: $colorSecundario;
+            font-weight: 600;
+        }
+        table {
+            width: 90%;
+        }
+        th {
+            font-size: 23px;
+            margin: 20px 0;
+        }
+        td {
+            font-size: 20px;
+            margin: 30px 0;
+        }
+    }
+}
+
+/* QUERY PARA TABLETAS */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .ubicacionesCabecera {
+        height: 200px;
+    }
+
+    .ubicacionesTitulo {
+        @include titulos-sizes (50px, 20px 0);
+    } 
+
+    .ubicacionesGrid1 {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 400px auto;
+        grid-template-areas:"sucursalNorte ubicacionesImagen1"
+                            "tabla1 ubicacionesMapa1";
+        margin-top: 1px;
+        margin-bottom: 100px;
+    }
+    .sucursalNorte {
+        background-color: $colorSecundario;
+    }
+    .sucursalTituloC {
+        h2 {
+            font-size: 45px;
+        }
+        p {
+            font-size: 18px;
+        }
+    }
+    .ubicacionesImagen1 {
+        background-image: url(../imagenes/ubicaciones-img-1.jpg);
+        background-position: center;
+    }
+    .tabla1 {
+        h2 {
+            margin: 10px 0;
+            color: $colorSecundario;
+            font-weight: 600;
+        }
+        table {
+            width: 90%;
+        }
+        th {
+            font-size: 20px;
+            margin: 20px 0;
+        }
+        td {
+            font-size: 17px;
+            margin: 30px 0;
+        }
+    }
+
+    .ubicacionesGrid2 {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 400px auto;
+        grid-template-areas:"sucursalCentro ubicacionesImagen2"
+                            "tabla2 ubicacionesMapa2";
+        margin-top: 40px;
+        margin-bottom: 100px;
+    }
+    .sucursalCentro {
+        background-color: $colorSecundario;
+    }
+    .sucursalTituloC {
+        h2 {
+            font-size: 45px;
+        }
+        p {
+            font-size: 18px;
+        }
+    }
+    .ubicacionesImagen2 {
+        background-image: url(../imagenes/ubicaciones-img-2.jpg);
+        background-position: center;
+    }
+    .tabla2 {
+        h2 {
+            margin: 10px 0;
+            color: $colorSecundario;
+            font-weight: 600;
+        }
+        table {
+            width: 90%;
+        }
+        th {
+            font-size: 23px;
+            margin: 20px 0;
+        }
+        td {
+            font-size: 20px;
+            margin: 30px 0;
+        }
+    }
+
+    .ubicacionesGrid3 {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 400px auto;
+        grid-template-areas:"sucursalSur ubicacionesImagen3"
+                            "tabla3 ubicacionesMapa3";
+        margin-top: 40px;
+        margin-bottom: 100px;
+    }
+    .sucursalSur {
+        background-color: $colorSecundario;
+    }
+    .sucursalTituloC {
+        h2 {
+            font-size: 45px;
+        }
+        p {
+            font-size: 18px;
+        }
+    }
+    .ubicacionesImagen3 {
+        background-image: url(../imagenes/ubicaciones-img-3.jpg);
+        background-position: center;
+    }
+    .tabla3 {
+        h2 {
+            margin: 10px 0;
+            color: $colorSecundario;
+            font-weight: 600;
+        }
+        table {
+            width: 90%;
+        }
+        th {
+            font-size: 23px;
+            margin: 20px 0;
+        }
+        td {
+            font-size: 20px;
+            margin: 30px 0;
+        }
+    }
+}
+
+/* QUERY PARA NOTEBOOKS */
+@media screen and (min-width: 1024px) and (max-width: 1999px) {
+    .ubicacionesCabecera {
+        height: 400px;
+    }
+    
+    .ubicacionesTitulo {
+        @include titulos-sizes (60px, 20px 0);
+    }
+
+    .ubicacionesGrid1 {
+        display: grid;
+        grid-template-columns: 35% 65%;
+        grid-template-rows: 400px auto;
+        grid-template-areas:"sucursalNorte ubicacionesImagen1"
+                            "tabla1 ubicacionesMapa1";
+        margin-top: 3px;
+        margin-bottom: 100px;
+    }
+    .sucursalNorte {
+        background-color: $colorSecundario;
+    }
+    .sucursalTituloC {
+        h2 {
+            font-size: 55px;
+        }
+        p {
+            font-size: 22px;
+        }
+    }
+    .ubicacionesImagen1 {
+        background-image: url(../imagenes/ubicaciones-img-1.jpg);
+        background-position: center;
+    }
+    .tabla1 {
+        h2 {
+            margin: 10px 0;
+            color: $colorSecundario;
+            font-weight: 600;
+        }
+        table {
+            width: 90%;
+        }
+        th {
+            font-size: 20px;
+            margin: 20px 0;
+        }
+        td {
+            font-size: 17px;
+            margin: 30px 0;
+        }
+    }
+
+    .ubicacionesGrid2 {
+        display: grid;
+        grid-template-columns: 35% 65%;
+        grid-template-rows: 400px auto;
+        grid-template-areas:"sucursalCentro ubicacionesImagen2"
+                            "tabla2 ubicacionesMapa2";
+        margin-top: 40px;
+        margin-bottom: 100px;
+    }
+    .sucursalCentro {
+        background-color: $colorSecundario;
+    }
+    .sucursalTituloC {
+        h2 {
+            font-size: 55px;
+        }
+        p {
+            font-size: 22px;
+        }
+    }
+    .ubicacionesImagen2 {
+        background-image: url(../imagenes/ubicaciones-img-2.jpg);
+        background-position: center;
+    }
+    .tabla2 {
+        h2 {
+            margin: 10px 0;
+            color: $colorSecundario;
+            font-weight: 600;
+        }
+        table {
+            width: 90%;
+        }
+        th {
+            font-size: 23px;
+            margin: 20px 0;
+        }
+        td {
+            font-size: 20px;
+            margin: 30px 0;
+        }
+    }
+
+    .ubicacionesGrid3 {
+        display: grid;
+        grid-template-columns: 35% 65%;
+        grid-template-rows: 400px auto;
+        grid-template-areas:"sucursalSur ubicacionesImagen3"
+                            "tabla3 ubicacionesMapa3";
+        margin-top: 40px;
+        margin-bottom: 100px;
+    }
+    .sucursalSur {
+        background-color: $colorSecundario;
+    }
+    .sucursalTituloC {
+        h2 {
+            font-size: 55px;
+        }
+        p {
+            font-size: 22px;
+        }
+    }
+    .ubicacionesImagen3 {
+        background-image: url(../imagenes/ubicaciones-img-3.jpg);
+        background-position: center;
+    }
+    .tabla3 {
+        h2 {
+            margin: 10px 0;
+            color: $colorSecundario;
+            font-weight: 600;
+        }
+        table {
+            width: 90%;
+        }
+        th {
+            font-size: 23px;
+            margin: 20px 0;
+        }
+        td {
+            font-size: 20px;
+            margin: 30px 0;
+        }
+    }
+}
+
+/* QUERY PARA PANTALLAS GRANDES */
+@media screen and (min-width: 1200px) {
+    .ubicacionesCabecera {
+        height: 400px;
+    }
+    
+    .ubicacionesTitulo {
+        @include titulos-sizes (60px, 20px 0);
+    }
+
+    .ubicacionesGrid1 {
+        display: grid;
+        grid-template-columns: 35% 65%;
+        grid-template-rows: 400px auto;
+        grid-template-areas:"sucursalNorte ubicacionesImagen1"
+                            "tabla1 ubicacionesMapa1";
+        margin-top: 3px;
+        margin-bottom: 100px;
+    }
+    .sucursalNorte {
+        background-color: $colorSecundario;
+    }
+    .sucursalTituloC {
+        h2 {
+            font-size: 55px;
+        }
+        p {
+            font-size: 20px;
+        }
+    }
+    .ubicacionesImagen1 {
+        background-image: url(../imagenes/ubicaciones-img-1.jpg);
+        background-position: center;
+    }
+    .tabla1 {
+        h2 {
+            margin: 10px 0;
+            color: $colorSecundario;
+            font-weight: 600;
+        }
+        table {
+            width: 90%;
+        }
+        th {
+            font-size: 23px;
+            margin: 20px 0;
+        }
+        td {
+            font-size: 20px;
+            margin: 30px 0;
+        }
+    }
+
+    .ubicacionesGrid2 {
+        display: grid;
+        grid-template-columns: 35% 65%;
+        grid-template-rows: 400px auto;
+        grid-template-areas:"sucursalCentro ubicacionesImagen2"
+                            "tabla2 ubicacionesMapa2";
+        margin-top: 40px;
+        margin-bottom: 100px;
+    }
+    .sucursalCentro {
+        background-color: $colorSecundario;
+    }
+    .sucursalTituloC {
+        h2 {
+            font-size: 55px;
+        }
+        p {
+            font-size: 20px;
+        }
+    }
+    .ubicacionesImagen2 {
+        background-image: url(../imagenes/ubicaciones-img-2.jpg);
+        background-position: center;
+    }
+    .tabla2 {
+        h2 {
+            margin: 10px 0;
+            color: $colorSecundario;
+            font-weight: 600;
+        }
+        table {
+            width: 90%;
+        }
+        th {
+            font-size: 23px;
+            margin: 20px 0;
+        }
+        td {
+            font-size: 20px;
+            margin: 30px 0;
+        }
+    }
+
+    .ubicacionesGrid3 {
+        display: grid;
+        grid-template-columns: 35% 65%;
+        grid-template-rows: 400px auto;
+        grid-template-areas:"sucursalSur ubicacionesImagen3"
+                            "tabla3 ubicacionesMapa3";
+        margin-top: 40px;
+        margin-bottom: 100px;
+    }
+    .sucursalSur {
+        background-color: $colorSecundario;
+    }
+    .sucursalTituloC {
+        h2 {
+            font-size: 55px;
+        }
+        p {
+            font-size: 22px;
+        }
+    }
+    .ubicacionesImagen3 {
+        background-image: url(../imagenes/ubicaciones-img-3.jpg);
+        background-position: center;
+    }
+    .tabla3 {
+        h2 {
+            margin: 10px 0;
+            color: $colorSecundario;
+            font-weight: 600;
+        }
+        table {
+            width: 90%;
+        }
+        th {
+            font-size: 23px;
+            margin: 20px 0;
+        }
+        td {
+            font-size: 20px;
+            margin: 30px 0;
+        }
+    }
+}
